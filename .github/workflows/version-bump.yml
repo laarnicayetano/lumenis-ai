@@ -2,9 +2,11 @@ name: Version bump on merge
 
 # Runs after a PR merges into master. Reads the PR's bump:* label, figures
 # out which plugin(s) the merged diff touched, bumps each one's
-# plugin.json accordingly, rebuilds the zips, and pushes the bump commit
-# straight to master. Labels are applied by the release-plugin skill (or by
-# hand) before merge — see .claude/skills/release-plugin/SKILL.md.
+# plugin.json accordingly, rebuilds the zips, pushes the bump commit
+# straight to master, and publishes a GitHub Release per bumped plugin with
+# its zip attached. Labels are applied by the propose-plugin-change skill
+# (or by hand) before merge — see
+# .claude/skills/propose-plugin-change/SKILL.md.
 
 on:
   pull_request:
@@ -66,11 +68,16 @@ jobs:
 
       - name: Bump versions and rebuild zips
         if: steps.level.outputs.level != 'none' && steps.plugins.outputs.plugins != ''
+        id: bumped
         run: |
+          pairs=""
           for name in ${{ steps.plugins.outputs.plugins }}; do
             python3 scripts/bump_version.py "$name" "${{ steps.level.outputs.level }}"
+            version=$(python3 -c "import json; print(json.load(open('plugins/$name/.claude-plugin/plugin.json'))['version'])")
+            pairs="$pairs $name:$version"
           done
           python3 scripts/build_zips.py
+          echo "pairs=$pairs" >> "$GITHUB_OUTPUT"
 
       - name: Commit and push version bump
         if: steps.level.outputs.level != 'none' && steps.plugins.outputs.plugins != ''
@@ -85,9 +92,16 @@ jobs:
             git push origin master
           fi
 
-      - name: Upload built zips
+      - name: Publish a GitHub Release per bumped plugin
         if: steps.level.outputs.level != 'none' && steps.plugins.outputs.plugins != ''
-        uses: actions/upload-artifact@v4
-        with:
-          name: plugin-zips
-          path: dist/*.zip
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          for pair in ${{ steps.bumped.outputs.pairs }}; do
+            name="${pair%%:*}"
+            version="${pair##*:}"
+            gh release create "${name}-v${version}" \
+              "dist/${name}-v${version}.zip" \
+              --title "${name} v${version}" \
+              --notes "Automated release from PR #${{ github.event.pull_request.number }} (${{ steps.level.outputs.level }} bump)."
+          done

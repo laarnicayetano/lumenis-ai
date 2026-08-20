@@ -1,17 +1,17 @@
 ---
-name: release-plugin
+name: propose-plugin-change
 description: Publish edits made in this repo (lumenis-ai) by opening a GitHub PR with a suggested version-bump label. Use when the user says "ship this", "publish this change", "release this", "open a PR", or has finished editing a skill and wants it live. This is a repo-local skill for maintaining lumenis-ai itself — not something distributed to plugin installers.
 ---
 
-# Release a Lumenis plugin change
+# Propose a Lumenis plugin change
 
 The person invoking this is often not a developer (e.g. a marketer editing a
 skill's wording or examples). Do the git work for them — don't ask them to
 run commands themselves unless something is genuinely ambiguous. This skill
 opens a PR for human review; it never pushes straight to `master`. Version
-bumping and zip rebuilding happen automatically via
-`.github/workflows/version-bump.yml` once the PR is merged — this skill does
-not run `bump_version.py` or `build_zips.py` itself.
+bumping, zip rebuilding, and publishing a GitHub Release happen automatically
+via `.github/workflows/version-bump.yml` once the PR is merged — this skill
+does not run `bump_version.py` or `build_zips.py` itself.
 
 ## Steps
 
@@ -73,8 +73,8 @@ not run `bump_version.py` or `build_zips.py` itself.
 7. **Report back in plain language**, e.g.:
    > Opened a PR: <url>. I've labeled it `bump:patch`, but you (or a
    > reviewer) can change the label before merging if a different bump makes
-   > more sense. Once it's merged, the version bump and zip rebuild happen
-   > automatically.
+   > more sense. Once it's merged, the version bump and a GitHub Release with
+   > the new zip happen automatically.
 
 ## Notes
 
