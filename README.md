@@ -28,9 +28,9 @@ upload a plugin file.
 1. Edit the skill(s).
 2. Bump the plugin version: `python scripts/bump_version.py core minor`
 3. Rebuild zips: `python scripts/build_zips.py`
-4. Redistribute the changed zip from `dist/`; people re-upload it.
-5. Push `dist/VERSIONS.json` to wherever `LATEST_MANIFEST_URL` points so the
-   version-check skill can see the new latest.
+4. Commit and push `plugin.json` — the version-check skill reads it straight
+   from GitHub, so pushing is what makes the new version visible.
+5. Redistribute the changed zip from `dist/`; people re-upload it.
 
 Anyone can ask Claude "am I on the latest plugins?" to check.
 
@@ -43,6 +43,6 @@ core, rebuild, redistribute.
 
 ## Privacy
 
-Repo can be private. `dist/VERSIONS.json` holds only plugin names + version
-numbers and may be published (e.g. a public Gist) so the version-check skill can
-read it without exposing the private content.
+The repo is public, so the version-check skill reads each plugin's
+`plugin.json` straight from GitHub. If this repo goes private later, that
+skill will need read access to still work — see `plugins/marketing/skills/version-check/SKILL.md`.
