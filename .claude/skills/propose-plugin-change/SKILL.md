@@ -15,10 +15,22 @@ does not run `bump_version.py` or `build_zips.py` itself.
 
 ## Steps
 
-1. **See what changed.** Run `git status` and `git diff` (or `git diff --staged`
+1. **Start from an up-to-date master before doing anything else**, so a new
+   branch never forks off stale code or an old feature branch the user
+   happens to be sitting on:
+   ```
+   git checkout master
+   git pull origin master
+   ```
+   If there are uncommitted changes in the working tree that aren't related
+   to what the user wants to publish, stop and ask rather than switching
+   branches out from under them — don't discard or carry over unrelated work
+   silently.
+
+2. **See what changed.** Run `git status` and `git diff` (or `git diff --staged`
    if things are already staged) to see which files changed.
 
-2. **Check for sensitive content before doing anything else.** This repo is
+3. **Check for sensitive content.** This repo is
    public — read the actual diff content (not just filenames) and look for:
    - API keys, tokens, passwords, or credentials (e.g. `sk-`, `AKIA`, `-----BEGIN
      PRIVATE KEY-----`, bearer tokens, `.env`-style `KEY=value` secrets)
@@ -33,11 +45,11 @@ does not run `bump_version.py` or `build_zips.py` itself.
    silently redact; a false positive costs one clarifying question, a false
    negative publishes a leak.
 
-3. **Map changes to plugin(s).** Any changed file under `plugins/<name>/`
+4. **Map changes to plugin(s).** Any changed file under `plugins/<name>/`
    affects that plugin. Ignore changes outside `plugins/` (e.g. README edits)
    for bump-level purposes, but still include them in the PR.
 
-4. **Pick one suggested bump level for the whole PR.** Default to **patch**.
+5. **Pick one suggested bump level for the whole PR.** Default to **patch**.
    Use your judgment on the diff, and don't ask unless it's genuinely
    unclear:
    - **none** — nothing under `plugins/` changed (docs, workflow, repo
@@ -52,7 +64,7 @@ does not run `bump_version.py` or `build_zips.py` itself.
    one level applies to all of them — split into separate PRs first if they
    genuinely need different bump levels.
 
-5. **Create a branch and commit.**
+6. **Create a branch and commit.**
    ```
    git checkout -b claude/<short-slug>
    git add <changed files>
@@ -62,7 +74,7 @@ does not run `bump_version.py` or `build_zips.py` itself.
    Do not touch `plugin.json` or run the version scripts — that happens
    automatically after merge.
 
-6. **Open the PR** with the bump label attached:
+7. **Open the PR** with the bump label attached:
    ```
    gh pr create --title "<summary>" --body "<what changed and why>" \
      --label "bump:<level>"
@@ -70,7 +82,7 @@ does not run `bump_version.py` or `build_zips.py` itself.
    (Labels `bump:none` / `bump:patch` / `bump:minor` / `bump:major` already
    exist on the repo.)
 
-7. **Report back in plain language**, e.g.:
+8. **Report back in plain language**, e.g.:
    > Opened a PR: <url>. I've labeled it `bump:patch`, but you (or a
    > reviewer) can change the label before merging if a different bump makes
    > more sense. Once it's merged, the version bump and a GitHub Release with
