@@ -1,13 +1,17 @@
 ---
 name: release-plugin
-description: Publish edits made in this repo (lumenis-ai) — bump the right plugin version(s), rebuild the zips, commit, and push. Use when the user says "ship this", "publish this change", "release this", "update the marketplace", or has finished editing a skill and wants it live. This is a repo-local skill for maintaining lumenis-ai itself — not something distributed to plugin installers.
+description: Publish edits made in this repo (lumenis-ai) by opening a GitHub PR with a suggested version-bump label. Use when the user says "ship this", "publish this change", "release this", "open a PR", or has finished editing a skill and wants it live. This is a repo-local skill for maintaining lumenis-ai itself — not something distributed to plugin installers.
 ---
 
 # Release a Lumenis plugin change
 
 The person invoking this is often not a developer (e.g. a marketer editing a
-skill's wording or examples). Do the git/versioning work for them — don't ask
-them to run commands themselves unless something is genuinely ambiguous.
+skill's wording or examples). Do the git work for them — don't ask them to
+run commands themselves unless something is genuinely ambiguous. This skill
+opens a PR for human review; it never pushes straight to `master`. Version
+bumping and zip rebuilding happen automatically via
+`.github/workflows/version-bump.yml` once the PR is merged — this skill does
+not run `bump_version.py` or `build_zips.py` itself.
 
 ## Steps
 
@@ -23,55 +27,58 @@ them to run commands themselves unless something is genuinely ambiguous.
    - Internal-only material that reads as confidential (unreleased pricing,
      unannounced product names, internal strategy docs, financial figures)
 
-   If you find any of this, **stop — do not commit or push.** Tell the user
-   plainly what you found and where, and let them decide whether to remove it
-   or confirm it's safe to publish. Don't guess or silently redact; a false
-   positive costs one clarifying question, a false negative publishes a leak.
+   If you find any of this, **stop — do not commit, push, or open a PR.**
+   Tell the user plainly what you found and where, and let them decide
+   whether to remove it or confirm it's safe to publish. Don't guess or
+   silently redact; a false positive costs one clarifying question, a false
+   negative publishes a leak.
 
 3. **Map changes to plugin(s).** Any changed file under `plugins/<name>/`
-   affects that plugin. A single edit can affect multiple plugins — handle
-   each independently. Ignore changes outside `plugins/` (e.g. README edits)
-   for versioning purposes, but still include them in the commit.
+   affects that plugin. Ignore changes outside `plugins/` (e.g. README edits)
+   for bump-level purposes, but still include them in the PR.
 
-4. **Pick a version bump per affected plugin.** Default to **patch**. Use
-   your judgment on the diff, and don't ask unless it's genuinely unclear:
+4. **Pick one suggested bump level for the whole PR.** Default to **patch**.
+   Use your judgment on the diff, and don't ask unless it's genuinely
+   unclear:
+   - **none** — nothing under `plugins/` changed (docs, workflow, repo
+     tooling only)
    - **patch** — wording tweaks, corrections, small examples, bug fixes
    - **minor** — a new skill added, a new capability, a meaningfully expanded
      skill
    - **major** — a skill removed or renamed in a way that breaks existing
      references, restructured plugin layout
-     If truly ambiguous, ask the user in one short sentence rather than
-     guessing on a major bump.
+   If truly ambiguous, ask the user in one short sentence rather than
+   guessing on a major bump. If a single PR touches multiple plugins, this
+   one level applies to all of them — split into separate PRs first if they
+   genuinely need different bump levels.
 
-5. **Bump each affected plugin:**
-
+5. **Create a branch and commit.**
    ```
-   python3 scripts/bump_version.py <plugin-name> <patch|minor|major>
+   git checkout -b claude/<short-slug>
+   git add <changed files>
+   git commit -m "<plain-language summary of the change>"
+   git push -u origin claude/<short-slug>
    ```
+   Do not touch `plugin.json` or run the version scripts — that happens
+   automatically after merge.
 
-6. **Rebuild the zips:**
-
+6. **Open the PR** with the bump label attached:
    ```
-   python3 scripts/build_zips.py
+   gh pr create --title "<summary>" --body "<what changed and why>" \
+     --label "bump:<level>"
    ```
+   (Labels `bump:none` / `bump:patch` / `bump:minor` / `bump:major` already
+   exist on the repo.)
 
-7. **Commit.** Stage the changed source files plus the bumped `plugin.json`
-   file(s) (not `dist/`, which is gitignored). Write a plain-language commit
-   message describing what changed, e.g.:
-   `core: v0.2.0 — clarified brand voice guidelines`
-   For multiple plugins in one change, one commit is fine; mention each
-   plugin and its new version in the message.
-
-8. **Push** to `origin` on the current branch.
-
-9. **Report back in plain language**, e.g.:
-   > Published `core` v0.2.0. If anyone's on an individual plan (not Claude
-   > Code), send them `dist/core-v0.2.0.zip` to re-upload in Customize →
-   > Plugins.
+7. **Report back in plain language**, e.g.:
+   > Opened a PR: <url>. I've labeled it `bump:patch`, but you (or a
+   > reviewer) can change the label before merging if a different bump makes
+   > more sense. Once it's merged, the version bump and zip rebuild happen
+   > automatically.
 
 ## Notes
 
-- If nothing under `plugins/` changed, there's nothing to version — just
-  mention that plainly rather than bumping anyway.
-- Never invent content changes — only version and publish what the user
-  actually edited.
+- Never invent content changes — only publish what the user actually edited.
+- If nothing changed at all, say so rather than opening an empty PR.
+- This skill's job ends at opening the PR. Merging, approving, and the
+  resulting version bump are handled by a human + CI, not by this skill.
