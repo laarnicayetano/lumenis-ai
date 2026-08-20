@@ -1,10 +1,10 @@
 # lumenis-ai
 
-Shared Lumenis skills for Claude, organized as a plugin marketplace.
+Shared Lumenis skills, organized as a plugin marketplace.
 
 ## Plugins
 
-| Plugin      | Install                | What it gives Claude                                                                       |
+| Plugin      | Install                | Description                                                                                |
 | ----------- | ---------------------- | ------------------------------------------------------------------------------------------ |
 | `core`      | `core@lumenis-ai`      | Brand context, global design system, per-product context/design skills. **Install first.** |
 | `marketing` | `marketing@lumenis-ai` | Positioning, new-product generator, image/HubSpot workflows, version checker.              |
@@ -18,7 +18,7 @@ upload a plugin file.
 **Claude Code (git access required):**
 
 ```
-/plugin marketplace add <owner>/lumenis-ai
+/plugin marketplace add laarnicayetano/lumenis-ai
 /plugin install core@lumenis-ai
 /plugin install marketing@lumenis-ai
 ```
@@ -32,11 +32,11 @@ upload a plugin file.
 5. Push `dist/VERSIONS.json` to wherever `LATEST_MANIFEST_URL` points so the
    version-check skill can see the new latest.
 
-Anyone can ask Claude "am I on the latest Lumenis plugins?" to check.
+Anyone can ask Claude "am I on the latest plugins?" to check.
 
 ## Adding a product
 
-Ask Claude (with the `marketing` plugin installed): "set up a skill for a new
+Ask (with the `marketing` plugin installed): "set up a skill for a new
 product." The `new-product-skill` generator writes a context + design skill
 pair into `core/skills/product-<slug>/`, matching `product-example`. Then bump
 core, rebuild, redistribute.

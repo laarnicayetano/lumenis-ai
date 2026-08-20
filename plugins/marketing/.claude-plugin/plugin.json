@@ -1,8 +1,8 @@
 {
   "name": "marketing",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Marketing positioning, new-product skill generator, image and HubSpot workflows, and version checking.",
   "author": {
-    "name": "Lumenis Marketing"
+    "name": "Lumenis"
   }
 }

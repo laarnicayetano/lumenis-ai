@@ -1,6 +1,6 @@
 ---
 name: new-product-skill
-description: Scaffold a new, consistent product skill set for Lumenis. Use when the user wants to add a product, create a product skill, onboard a new product/department, or "set up Claude for a new product". Generates a context skill and a design-overrides skill following the house pattern.
+description: Scaffold a new, consistent product skill set for Lumenis. Use when the user wants to add a product, create a product skill, onboard a new product/department, or "set up a new product". Generates a context skill and a design-overrides skill following the house pattern.
 ---
 
 # New product skill generator
@@ -26,9 +26,10 @@ Creates a consistent pair of skills for a new product, matching the pattern in
 4. Fill any provided content; leave `<!-- comment -->` placeholders for the rest.
 5. Tell the user the exact save paths, and remind them:
    "Commit these to core/skills/product-<slug>/, bump core's version
-    (scripts/bump_version.py core minor), rebuild zips, and redistribute."
+   (scripts/bump_version.py core minor), rebuild zips, and redistribute."
 
 ## Rules for consistency
+
 - Descriptions must disambiguate by product name — this is what prevents the
   wrong product skill firing on an ambiguous request.
 - Design skill lists only DELTAS from the global design system.

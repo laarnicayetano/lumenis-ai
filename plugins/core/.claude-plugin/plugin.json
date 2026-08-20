@@ -1,6 +1,8 @@
 {
   "name": "core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Company-wide Lumenis brand context, global design system, and per-product context and design skills.",
-  "author": { "name": "Lumenis Marketing" }
+  "author": {
+    "name": "Lumenis"
+  }
 }
