@@ -1,0 +1,107 @@
+name: Version bump on merge
+
+# Runs after a PR merges into master. Reads the PR's bump:* label, figures
+# out which plugin(s) the merged diff touched, bumps each one's
+# plugin.json accordingly, rebuilds the zips, pushes the bump commit
+# straight to master, and publishes a GitHub Release per bumped plugin with
+# its zip attached. Labels are applied by the propose-plugin-change skill
+# (or by hand) before merge — see
+# .claude/skills/propose-plugin-change/SKILL.md.
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [master]
+
+permissions:
+  contents: write
+
+jobs:
+  bump:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Determine bump level from PR labels
+        id: level
+        env:
+          LABELS: ${{ join(github.event.pull_request.labels.*.name, ',') }}
+        run: |
+          level=""
+          for l in patch minor major none; do
+            if echo ",$LABELS," | grep -q ",bump:$l,"; then
+              level="$l"
+            fi
+          done
+          if [ -z "$level" ]; then
+            echo "No bump:* label found — skipping version bump."
+            level="none"
+          fi
+          echo "level=$level" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout master
+        if: steps.level.outputs.level != 'none'
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+
+      - name: Set up Python
+        if: steps.level.outputs.level != 'none'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Find affected plugins
+        if: steps.level.outputs.level != 'none'
+        id: plugins
+        run: |
+          plugins=$(git diff --name-only \
+              "${{ github.event.pull_request.base.sha }}" \
+              "${{ github.event.pull_request.head.sha }}" \
+            | grep -oE '^plugins/[^/]+' | sed 's#plugins/##' | sort -u)
+          if [ -z "$plugins" ]; then
+            echo "No plugins/<name>/ files changed — nothing to bump."
+            echo "plugins=" >> "$GITHUB_OUTPUT"
+          else
+            echo "plugins=$(echo "$plugins" | tr '\n' ' ')" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Bump versions and rebuild zips
+        if: steps.level.outputs.level != 'none' && steps.plugins.outputs.plugins != ''
+        id: bumped
+        run: |
+          pairs=""
+          for name in ${{ steps.plugins.outputs.plugins }}; do
+            python3 scripts/bump_version.py "$name" "${{ steps.level.outputs.level }}"
+            version=$(python3 -c "import json; print(json.load(open('plugins/$name/.claude-plugin/plugin.json'))['version'])")
+            pairs="$pairs $name:$version"
+          done
+          python3 scripts/build_zips.py
+          echo "pairs=$pairs" >> "$GITHUB_OUTPUT"
+
+      - name: Commit and push version bump
+        if: steps.level.outputs.level != 'none' && steps.plugins.outputs.plugins != ''
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add plugins/*/.claude-plugin/plugin.json
+          if git diff --staged --quiet; then
+            echo "No plugin.json changes to commit."
+          else
+            git commit -m "chore: bump ${{ steps.plugins.outputs.plugins }} (${{ steps.level.outputs.level }}) — PR #${{ github.event.pull_request.number }}"
+            git push origin master
+          fi
+
+      - name: Publish a GitHub Release per bumped plugin
+        if: steps.level.outputs.level != 'none' && steps.plugins.outputs.plugins != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          for pair in ${{ steps.bumped.outputs.pairs }}; do
+            name="${pair%%:*}"
+            version="${pair##*:}"
+            gh release create "${name}-v${version}" \
+              "dist/${name}-v${version}.zip" \
+              --title "${name} v${version}" \
+              --notes "Automated release from PR #${{ github.event.pull_request.number }} (${{ steps.level.outputs.level }} bump)."
+          done
