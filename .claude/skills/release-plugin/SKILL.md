@@ -14,12 +14,26 @@ them to run commands themselves unless something is genuinely ambiguous.
 1. **See what changed.** Run `git status` and `git diff` (or `git diff --staged`
    if things are already staged) to see which files changed.
 
-2. **Map changes to plugin(s).** Any changed file under `plugins/<name>/`
+2. **Check for sensitive content before doing anything else.** This repo is
+   public — read the actual diff content (not just filenames) and look for:
+   - API keys, tokens, passwords, or credentials (e.g. `sk-`, `AKIA`, `-----BEGIN
+     PRIVATE KEY-----`, bearer tokens, `.env`-style `KEY=value` secrets)
+   - Real customer/personal data (names + emails, phone numbers, addresses,
+     account IDs) rather than placeholder/example data
+   - Internal-only material that reads as confidential (unreleased pricing,
+     unannounced product names, internal strategy docs, financial figures)
+
+   If you find any of this, **stop — do not commit or push.** Tell the user
+   plainly what you found and where, and let them decide whether to remove it
+   or confirm it's safe to publish. Don't guess or silently redact; a false
+   positive costs one clarifying question, a false negative publishes a leak.
+
+3. **Map changes to plugin(s).** Any changed file under `plugins/<name>/`
    affects that plugin. A single edit can affect multiple plugins — handle
    each independently. Ignore changes outside `plugins/` (e.g. README edits)
    for versioning purposes, but still include them in the commit.
 
-3. **Pick a version bump per affected plugin.** Default to **patch**. Use
+4. **Pick a version bump per affected plugin.** Default to **patch**. Use
    your judgment on the diff, and don't ask unless it's genuinely unclear:
    - **patch** — wording tweaks, corrections, small examples, bug fixes
    - **minor** — a new skill added, a new capability, a meaningfully expanded
@@ -29,28 +43,28 @@ them to run commands themselves unless something is genuinely ambiguous.
      If truly ambiguous, ask the user in one short sentence rather than
      guessing on a major bump.
 
-4. **Bump each affected plugin:**
+5. **Bump each affected plugin:**
 
    ```
    python3 scripts/bump_version.py <plugin-name> <patch|minor|major>
    ```
 
-5. **Rebuild the zips:**
+6. **Rebuild the zips:**
 
    ```
    python3 scripts/build_zips.py
    ```
 
-6. **Commit.** Stage the changed source files plus the bumped `plugin.json`
+7. **Commit.** Stage the changed source files plus the bumped `plugin.json`
    file(s) (not `dist/`, which is gitignored). Write a plain-language commit
    message describing what changed, e.g.:
    `core: v0.2.0 — clarified brand voice guidelines`
    For multiple plugins in one change, one commit is fine; mention each
    plugin and its new version in the message.
 
-7. **Push** to `origin` on the current branch.
+8. **Push** to `origin` on the current branch.
 
-8. **Report back in plain language**, e.g.:
+9. **Report back in plain language**, e.g.:
    > Published `core` v0.2.0. If anyone's on an individual plan (not Claude
    > Code), send them `dist/core-v0.2.0.zip` to re-upload in Customize →
    > Plugins.
@@ -61,5 +75,3 @@ them to run commands themselves unless something is genuinely ambiguous.
   mention that plainly rather than bumping anyway.
 - Never invent content changes — only version and publish what the user
   actually edited.
-- This repo is public (see README's Privacy section) — never commit secrets,
-  API keys, or internal-only material while doing this.
