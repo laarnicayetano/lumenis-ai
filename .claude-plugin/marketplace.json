@@ -1,0 +1,27 @@
+{
+  "name": "lumenis-ai",
+  "owner": {
+    "name": "Lumenis Marketing",
+    "email": "laarnicayetano@proton.me"
+  },
+  "metadata": {
+    "description": "Shared Lumenis skills: brand context, design system, per-product context, and marketing tooling.",
+    "version": "0.0.1"
+  },
+  "plugins": [
+    {
+      "name": "core",
+      "source": "./plugins/core",
+      "description": "Install first. Company-wide brand context, the global design system, and per-product context/design skills.",
+      "category": "foundation",
+      "tags": ["brand", "design-system", "products"]
+    },
+    {
+      "name": "marketing",
+      "source": "./plugins/marketing",
+      "description": "Marketing positioning, the new-product skill generator, workflow automations, and the version checker.",
+      "category": "marketing",
+      "tags": ["positioning", "workflows", "tooling"]
+    }
+  ]
+}
