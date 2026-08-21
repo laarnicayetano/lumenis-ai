@@ -18,7 +18,7 @@ the installed copy and in the repo (public:
   `.claude-plugin/plugin.json`.
 - Latest version: fetch each plugin's `plugin.json` directly, e.g.:
 
-  `https://raw.githubusercontent.com/laarnicayetano/lumenis-ai/main/plugins/<plugin-name>/.claude-plugin/plugin.json`
+  `https://raw.githubusercontent.com/laarnicayetano/lumenis-ai/master/plugins/<plugin-name>/.claude-plugin/plugin.json`
 
 ## What to do when invoked
 
