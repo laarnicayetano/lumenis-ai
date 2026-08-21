@@ -1,16 +1,7 @@
 # Lumenis Aesthetics
 
-Sourced from lumenis.com/aesthetics (homepage, technology, products,
-treatments, resource hub). Re-check the source pages periodically — the
+Sourced from lumenis.com. Re-check the source pages periodically — the
 portfolio and figures change.
-
-## Source
-
-- https://lumenis.com/aesthetics/homepage/
-  https://lumenis.com/aesthetics/- resource-hub/
-- https://lumenis.com/aesthetics/technology/
-- https://lumenis.com/aesthetics/products/
-- https://lumenis.com/aesthetics/treatments/
 
 ## Who it serves & positioning
 
@@ -113,3 +104,11 @@ Aesthetipedia platform) currently emphasizes:
   at major conferences.
 - **Provider success stories** — practitioner testimonials on adopting
   these treatments as practice additions.
+
+## Source
+
+- [Aesthetic Home Page](https://lumenis.com/aesthetics/homepage/)
+- [Resource Hub](https://lumenis.com/aesthetics/-resource-hub)
+- [Technology](https://lumenis.com/aesthetics/technology/)
+- [Products](https://lumenis.com/aesthetics/products/)
+- [Treatments](https://lumenis.com/aesthetics/treatments/)
