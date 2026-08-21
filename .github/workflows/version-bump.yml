@@ -55,8 +55,11 @@ jobs:
         if: steps.level.outputs.level != 'none'
         id: plugins
         run: |
-          plugins=$(git diff --name-only \
+          merge_base=$(git merge-base \
               "${{ github.event.pull_request.base.sha }}" \
+              "${{ github.event.pull_request.head.sha }}")
+          plugins=$(git diff --name-only \
+              "$merge_base" \
               "${{ github.event.pull_request.head.sha }}" \
             | grep -oE '^plugins/[^/]+' | sed 's#plugins/##' | sort -u)
           if [ -z "$plugins" ]; then

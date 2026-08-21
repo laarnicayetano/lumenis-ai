@@ -82,7 +82,15 @@ does not run `bump_version.py` or `build_zips.py` itself.
    (Labels `bump:none` / `bump:patch` / `bump:minor` / `bump:major` already
    exist on the repo.)
 
-8. **Report back in plain language**, e.g.:
+8. **Switch back to master** once the branch is pushed and the PR is open:
+   ```
+   git checkout master
+   ```
+   Don't leave the working directory sitting on the just-opened PR branch —
+   the next task should start clean, not accidentally stack changes onto a
+   branch that's already up for review.
+
+9. **Report back in plain language**, e.g.:
    > Opened a PR: <url>. I've labeled it `bump:patch`, but you (or a
    > reviewer) can change the label before merging if a different bump makes
    > more sense. Once it's merged, the version bump and a GitHub Release with
