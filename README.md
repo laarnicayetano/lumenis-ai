@@ -11,8 +11,8 @@ Shared Lumenis skills, organized as a plugin marketplace.
 
 ## Installing
 
-**claude.ai / Desktop / Cowork (individual plans):** distribute the built zips
-from `dist/` and have each person upload them in Customize → Plugins → "+" →
+**claude.ai / Desktop / Cowork (individual plans):** Download each plugin's zip file
+from [releases page](../../releases) and upload them in Customize → Plugins → "+" →
 upload a plugin file.
 
 **Claude Code (git access required):**
