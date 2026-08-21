@@ -9,7 +9,7 @@ def main():
     args = p.parse_args()
     print(f"[placeholder] Would build HubSpot landing page "
           f"'{args.name}' from template '{args.template}'.")
-    # TODO: paste Nicholas's build logic here.
+    # TODO: paste build logic here.
 
 if __name__ == "__main__":
     main()
