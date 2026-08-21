@@ -7,7 +7,7 @@ Shared Lumenis skills, organized as a plugin marketplace.
 | Plugin      | Install                | Description                                                                                |
 | ----------- | ---------------------- | ------------------------------------------------------------------------------------------ |
 | `core`      | `core@lumenis-ai`      | Brand context, global design system, per-product context/design skills. **Install first.** |
-| `marketing` | `marketing@lumenis-ai` | Positioning, new-product generator, image/HubSpot workflows, version checker.              |
+| `marketing` | `marketing@lumenis-ai` | Positioning, new-product generator, image/HubSpot workflows.                               |
 
 ## Installing
 
@@ -38,7 +38,10 @@ merges it. Once merged, `.github/workflows/version-bump.yml` automatically
 bumps the affected plugin's `plugin.json`, rebuilds its zip, and publishes a
 GitHub Release with the zip attached — nothing manual to do after approval.
 
-Anyone can ask Claude "am I on the latest plugins?" to check they're current.
+Each plugin's `plugin.json` description leads with its version (e.g. "v0.2.0 —
+..."), so anyone can check their installed version against the latest by
+comparing what's in Customize → Plugins to the [releases page](../../releases)
+or this repo.
 
 If you're on an individual plan (not Claude Code), grab the zip from the
 plugin's [GitHub Release](../../releases) and send it to people to re-upload
@@ -46,5 +49,5 @@ in Customize → Plugins.
 
 ## Privacy
 
-The repo is public, so the version-check skill reads each plugin's
-`plugin.json` straight from GitHub. Since everything is public we should take special care NOT to add sensitive material.
+The repo is public, so `plugin.json` and everything under `plugins/` is
+world-readable. Since everything is public we should take special care NOT to add sensitive material.
