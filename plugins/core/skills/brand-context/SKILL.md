@@ -8,14 +8,19 @@ description: Lumenis company context — history, mission, and overall business 
 Load the reference files below only when the task needs that depth.
 
 ## Company at a glance
-<!-- 2-3 sentences: what Lumenis does, who it serves, what makes it distinct. -->
+
+See `references/about.md` for company overview, mission and values, key
+facts, leadership, and social responsibility.
 
 ## History
+
 See `references/history.md` for the founding story and milestones.
 
 ## Strategy
+
 See `references/strategy.md` for current priorities and how they shape messaging.
 
 ## How to use this
+
 - Ground claims in the strategy doc; don't invent positioning.
 - If a request is product-specific, defer to the relevant product context skill.
