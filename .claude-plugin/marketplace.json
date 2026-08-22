@@ -11,19 +11,27 @@
   "plugins": [
     {
       "name": "core",
-      "displayName": "Core v0.2.2",
+      "displayName": "Core v0.3.0",
       "source": "./plugins/core",
-      "description": "Install first. Company-wide brand context, the global design system, and per-product context/design skills.",
+      "description": "v0.3.0 \u2014 Install first. Company-wide brand context, the global design system, and per-product context/design skills.",
       "category": "foundation",
-      "tags": ["brand", "design-system", "products"]
+      "tags": [
+        "brand",
+        "design-system",
+        "products"
+      ]
     },
     {
       "name": "marketing",
-      "displayName": "Marketing v0.3.0",
+      "displayName": "Marketing v0.4.0",
       "source": "./plugins/marketing",
-      "description": "Marketing positioning, the new-product skill generator, workflow automations, and the version checker.",
+      "description": "v0.4.0 \u2014 Marketing positioning, the new-product skill generator, workflow automations, and the version checker.",
       "category": "marketing",
-      "tags": ["positioning", "workflows", "tooling"]
+      "tags": [
+        "positioning",
+        "workflows",
+        "tooling"
+      ]
     }
   ]
 }
