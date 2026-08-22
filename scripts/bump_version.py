@@ -8,6 +8,7 @@ import json, re, sys
 from pathlib import Path
 
 VERSION_PREFIX = re.compile(r"^v\d+\.\d+\.\d+ — ")
+VERSION_SUFFIX = re.compile(r" v\d+\.\d+\.\d+$")
 
 def bump(version, part):
     major, minor, patch = (int(x) for x in version.split("."))
@@ -19,6 +20,13 @@ def set_version_prefix(description, version):
     stripped = VERSION_PREFIX.sub("", description, count=1)
     return f"v{version} — {stripped}"
 
+def title_case(name):
+    return " ".join(word.capitalize() for word in name.split("-"))
+
+def set_version_suffix(display_name, version):
+    stripped = VERSION_SUFFIX.sub("", display_name, count=1)
+    return f"{stripped} v{version}"
+
 def update_marketplace_entry(name, version):
     marketplace_path = Path(".claude-plugin") / "marketplace.json"
     if not marketplace_path.exists():
@@ -27,6 +35,9 @@ def update_marketplace_entry(name, version):
     for entry in data.get("plugins", []):
         if entry.get("name") == name:
             entry["description"] = set_version_prefix(entry["description"], version)
+            entry["displayName"] = set_version_suffix(
+                entry.get("displayName", title_case(name)), version
+            )
             break
     marketplace_path.write_text(json.dumps(data, indent=2) + "\n")
 
