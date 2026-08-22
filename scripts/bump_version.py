@@ -15,6 +15,21 @@ def bump(version, part):
     if part == "minor": return f"{major}.{minor+1}.0"
     return f"{major}.{minor}.{patch+1}"
 
+def set_version_prefix(description, version):
+    stripped = VERSION_PREFIX.sub("", description, count=1)
+    return f"v{version} — {stripped}"
+
+def update_marketplace_entry(name, version):
+    marketplace_path = Path(".claude-plugin") / "marketplace.json"
+    if not marketplace_path.exists():
+        return
+    data = json.loads(marketplace_path.read_text())
+    for entry in data.get("plugins", []):
+        if entry.get("name") == name:
+            entry["description"] = set_version_prefix(entry["description"], version)
+            break
+    marketplace_path.write_text(json.dumps(data, indent=2) + "\n")
+
 def main():
     if len(sys.argv) < 2:
         raise SystemExit("Usage: bump_version.py <plugin-name> [patch|minor|major]")
@@ -25,10 +40,9 @@ def main():
         raise SystemExit(f"Not found: {manifest}")
     data = json.loads(manifest.read_text())
     old = data["version"]; data["version"] = bump(old, part)
-    data["description"] = VERSION_PREFIX.sub(
-        f"v{data['version']} — ", data["description"], count=1
-    )
+    data["description"] = set_version_prefix(data["description"], data["version"])
     manifest.write_text(json.dumps(data, indent=2) + "\n")
+    update_marketplace_entry(name, data["version"])
     print(f"{name}: {old} -> {data['version']}\nNow run: python scripts/build_zips.py")
 
 if __name__ == "__main__":
