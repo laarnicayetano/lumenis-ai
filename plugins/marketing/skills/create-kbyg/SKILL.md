@@ -45,6 +45,6 @@ Follow whichever [core:audience-archetypes](../../../core/skills/audience-archet
 
 ## Notes
 
-- Not limited to KOLs — generate the appropriate email for whichever recipient type the schedule covers, matching tone to their archetype.
+-Generate the appropriate email for whichever recipient type the schedule covers, matching tone to their archetype.
 - Omit sections with no input to draw from (e.g. skip "NOTE" if there are no action items, skip staff call-outs if no names were given) rather than inventing detail.
 - Pair with [core:brand-context](../../../core/skills/brand-context/SKILL.md) if the email needs to reflect company voice beyond the archetype's tone guidance.
