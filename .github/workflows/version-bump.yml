@@ -103,7 +103,7 @@ jobs:
           for pair in ${{ steps.bumped.outputs.pairs }}; do
             name="${pair%%:*}"
             version="${pair##*:}"
-            gh release create "${name}-v${version}" \
+            gh release create "v${version}-${name}" \
               "dist/${name}-v${version}.zip" \
               --title "${name} v${version}" \
               --notes "Automated release from PR #${{ github.event.pull_request.number }} (${{ steps.level.outputs.level }} bump)."
