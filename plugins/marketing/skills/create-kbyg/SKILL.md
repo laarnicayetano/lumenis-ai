@@ -1,7 +1,6 @@
 ---
 name: create-kbyg
-displayName: know-before-you-go
-description: Generate "know before you go" pre-event logistics emails, given an event schedule. Use when the user wants a pre-event logistics email for anyone attending an event — a presenting physician/KOL, attending staff, sales team, etc. — or says "know before you go" for an event. Input can be pasted text, a CSV/spreadsheet, or a doc/URL with the schedule; output is one personalized plain-text email per recipient (or recipient group), toned for whichever audience it's for.
+description: Generate "know before you go" pre-event logistics emails, given an event schedule. Use when the user wants a pre-event logistics email or says "know before you go" for an event. Input can be pasted text, a CSV/spreadsheet, or a doc/URL with the schedule; output is one personalized plain-text email per recipient (or recipient group), toned for whichever audience it's for.
 ---
 
 # Know before you go
@@ -46,5 +45,6 @@ Follow whichever [core:audience-archetypes](../../../core/skills/audience-archet
 ## Notes
 
 -Generate the appropriate email for whichever recipient type the schedule covers, matching tone to their archetype.
+
 - Omit sections with no input to draw from (e.g. skip "NOTE" if there are no action items, skip staff call-outs if no names were given) rather than inventing detail.
 - Pair with [core:brand-context](../../../core/skills/brand-context/SKILL.md) if the email needs to reflect company voice beyond the archetype's tone guidance.
