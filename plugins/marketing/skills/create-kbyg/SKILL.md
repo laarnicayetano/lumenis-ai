@@ -28,15 +28,16 @@ If the schedule is missing day-by-day detail or these logistics, ask the user ra
 
 One plain-text email per recipient (or recipient team) — no HTML, no images. Generate a separate email for each recipient/team found in the schedule. Follow this structure, modeled on a real sent example:
 
+1. **Subject**: The Subject line to use in the email
 1. **Greeting**: first name, en-dash, e.g. "Hi [Name] –"
-2. **Opening**: thank them for their time (reference a prior call/conversation if the input mentions one), say you're looking forward to having them, and state the purpose — "Know Before You Go" for their team as they prepare to attend [Event Name].
-3. **Venue line**: venue name + full address on its own line.
-4. **Reference materials**: name any sign-up sheets, detailed schedules, or attachments they should expect/use, and note if a schedule is attached.
-5. **Day-by-day breakdown**: one labeled section per day (e.g. "Friday:", "Saturday:", "Sunday:"), each a short bullet list covering setup/arrival time, event hours, meals, and their slot that day — call out any staff who'll assist by name and what they'll help with.
-6. **NOTE**: a distinct callout listing what's needed from them (final deck, phone numbers, etc.) — only include if the input specifies action items.
-7. **Closing**: thanks, invite questions, and a sign-off — warmth and enthusiasm level set by the audience archetype's tone guidance.
+1. **Opening**: thank them for their time (reference a prior call/conversation if the input mentions one), say you're looking forward to having them, and state the purpose — "Know Before You Go" for their team as they prepare to attend [Event Name].
+1. **Venue line**: venue name + full address on its own line.
+1. **Reference materials**: name any sign-up sheets, detailed schedules, or attachments they should expect/use, and note if a schedule is attached.
+1. **Day-by-day breakdown**: one labeled section per day (e.g. "Friday:", "Saturday:", "Sunday:"), each a short bullet list covering setup/arrival time, event hours, meals, and their slot that day — call out any staff who'll assist by name and what they'll help with.
+1. **NOTE**: a distinct callout listing what's needed from them (final deck, phone numbers, etc.) — only include if the input specifies action items.
+1. **Closing**: thanks, invite questions, and a sign-off — warmth and enthusiasm level set by the audience archetype's tone guidance.
 
-See [example.md](example.md) for a real sent example (written for a KOL audience) — reference it for structure and density, but do not reuse verbatim; pull the actual event/venue/day/contact details from the input schedule, and adjust tone for whichever archetype actually applies.
+See [example.md](example.md) for real sent examples (written for a KOL audience) — reference them for structure and density, but do not reuse verbatim; pull the actual event/venue/day/contact details from the input schedule, and adjust tone for whichever archetype actually applies.
 
 ## Tone
 
