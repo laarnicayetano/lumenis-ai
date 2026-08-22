@@ -1,6 +1,6 @@
 ---
 name: audience-archetypes
-description: Lumenis audience personas — who a piece of communication is for, what they care about, and how to talk to them. Use whenever tone, content, or depth needs to adapt to a specific audience — presentations, slide decks, emails, landing pages. Pair with the skill actually producing the output (e.g. slide-builder) rather than using standalone.
+description: Lumenis audience personas — who a piece of communication is for, what they care about, and how to talk to them. Use whenever tone, content, or depth needs to adapt to a specific audience — presentations, slide decks, emails, landing pages. Pair with the skill actually producing the output (e.g. create-slides) rather than using standalone.
 ---
 
 # Audience archetypes

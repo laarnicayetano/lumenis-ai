@@ -1,5 +1,5 @@
 ---
-name: slide-builder
+name: create-slides
 description: Build a slide deck as plain, clearly-labeled markdown text — no design system or visual rendering involved. Use when the user wants a presentation, slide deck, or deck outline built from a topic/key points or from existing long-form content (a doc, brief, or report). Pair with the audience-archetypes skill to match tone/depth to who the deck is for.
 ---
 
