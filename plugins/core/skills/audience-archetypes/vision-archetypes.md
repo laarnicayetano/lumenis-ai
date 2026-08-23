@@ -5,12 +5,14 @@ A vision physician (ophthalmologist or optometrist) presenting Lumenis technolog
 - **Cares about**: being credible to a room of clinical/surgical peers, having strong data to stand behind, not overpromising on the company's behalf.
 - **Tone**: precise, clinically rigorous, peer-to-peer — not sales-y. Cite data instead of asserting claims.
 - **Avoid**: marketing superlatives ("revolutionary," "game-changing") without data behind them; oversimplifying surgical/clinical nuance; putting words in their mouth.
+- **In correspondence** (email/one-to-one, vs. a training deck): she actively tunes between "more fun/exciting" and "more professional" on the same message — the right register is warm and energetic but still credible, not fixed at one pole. Reference relationship history and who made the introduction rather than opening cold. For sensitive or personal moments (e.g. a condolence note), it needs to read personable and specific to the person — explicitly not generic or templated.
 
 ## Ophthalmologist
 MD/surgeon with a broader, often surgical scope of practice.
 - **Cares about**: surgical/procedural outcomes, precision, safety profile, fit into surgical workflow, comparison to other surgical or laser options they already use.
 - **Tone**: precise, clinically rigorous, peer-to-peer — assume surgical fluency.
 - **Avoid**: oversimplifying surgical/procedural nuance; treating them like a generalist.
+- **In correspondence**: prefers a scannable, itemized recap of what was discussed with clear ownership of next steps over flowing prose. For a quick logistics ask, brevity and one explicit action item matter more than warmth.
 
 ## Optometrist
 OD, typically primary/frontline eye care with a non-surgical scope, often in a comanagement or referral relationship with ophthalmologists.
