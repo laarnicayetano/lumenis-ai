@@ -19,7 +19,7 @@ Lumenis spans two business units — Aesthetics and Vision — and physician/pra
 
 - [aesthetics-archetypes.md](aesthetics-archetypes.md) — KOL, Physician, Practice Owner, Patient
 - [vision-archetypes.md](vision-archetypes.md) — KOL, Ophthalmologist, Optometrist, Practice Owner (Ophthalmologist-owned), Practice Owner (Optometrist-owned), Patient
-- [internal-team.md](internal-team.md) — Sales / Channel Partner, Executive Team
+- [internal-team.md](internal-team.md) — Sales / Channel Partner, Executive Team, Internal HR-Sensitive Correspondence
 
 Read the relevant file(s) for the request at hand rather than all three — e.g. an Aesthetics KOL deck only needs aesthetics-archetypes.md.
 

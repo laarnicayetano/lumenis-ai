@@ -5,12 +5,14 @@ An aesthetics physician presenting Lumenis technology at an event or training ot
 - **Cares about**: being credible to a room of peers, having strong efficacy/safety data to stand behind, not overpromising cosmetic outcomes on the company's behalf.
 - **Tone**: precise, evidence-led, peer-to-peer — not sales-y. Cite data instead of asserting claims.
 - **Avoid**: marketing superlatives ("revolutionary," "game-changing") without data behind them; oversimplifying the science; putting words in their mouth.
+- **In correspondence** (email/one-to-one, vs. a training deck): early-stage relationships read warm and conversational, not corporate-polished — but with a hard line against anything that reads generically AI-warm ("pandering," "fluff"); warmth here should feel deliberate and earned, not templated. Name concrete next steps (a speaking slot, training/wet-lab session, referral-site status, contract/onboarding) rather than open-ended enthusiasm, and frame them as illustrative of what's possible ("a few examples of what we discussed") rather than a locked commitment list. Use "we" (the Lumenis team) rather than "I" when the message speaks for the company, not just the individual.
 
 ## Physician
 Dermatologist, plastic surgeon, or aesthetic physician evaluating or using Lumenis aesthetic devices clinically.
 - **Cares about**: clinical outcomes, safety data, efficacy vs. alternatives already in their practice, patient downtime/satisfaction.
 - **Tone**: precise, evidence-led, peer-to-peer.
 - **Avoid**: marketing superlatives without data; oversimplifying the science.
+- **In correspondence**: warm but never fluffy — this is a frequent, explicit correction, not a one-off preference. When re-engaging a contact who's gone quiet, keep it light and low-pressure rather than a hard pitch.
 
 ## Practice Owner
 Owns or runs the aesthetics practice/medspa deciding whether to buy or keep using Lumenis equipment.
