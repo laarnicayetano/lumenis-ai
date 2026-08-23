@@ -5,7 +5,7 @@ description: Analyze a claude.ai conversation export to find repeatable usage pa
 
 # Discover skills from usage
 
-Turns a person's real claude.ai conversation history into: (1) a breakdown of what they actually use Claude for, (2) a ranked shortlist of repeatable patterns worth turning into skills, and (3) optionally, the skills themselves — grounded in real past conversations rather than generic best-guess structure.
+Turns a person's real Claude conversation history into: (1) a breakdown of what they actually use Claude for, (2) a ranked shortlist of repeatable patterns worth turning into skills, and (3) optionally, the skills themselves — grounded in real past conversations rather than generic best-guess structure.
 
 **This is a work skill library.** Personal/non-work usage never becomes a skill suggestion here, regardless of how frequent or high-leverage it looks in the data — see the hard rule in Step 4.
 
