@@ -23,9 +23,9 @@
     },
     {
       "name": "marketing",
-      "displayName": "Marketing v0.10.0",
+      "displayName": "Marketing v0.11.0",
       "source": "./plugins/marketing",
-      "description": "v0.10.0 \u2014 Marketing positioning, the new-product skill generator, workflow automations, and the version checker.",
+      "description": "v0.11.0 \u2014 Marketing positioning, the new-product skill generator, workflow automations, and the version checker.",
       "category": "marketing",
       "tags": [
         "positioning",
