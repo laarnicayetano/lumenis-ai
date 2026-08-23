@@ -1,6 +1,6 @@
 ---
 name: audience-archetypes
-description: Lumenis audience personas — who a piece of communication is for, what they care about, and how to talk to them. Use whenever tone, content, or depth needs to adapt to a specific audience — presentations, slide decks, emails, landing pages. Pair with the skill actually producing the output (e.g. create-slides) rather than using standalone.
+description: Lumenis audience personas — who a piece of communication is for, what they care about, and how to talk to them — plus a correspondence register dial (polished/warm/executive/diplomatic/concise) for one-to-one messages. Use whenever tone, content, or depth needs to adapt to a specific audience or relationship stage — presentations, slide decks, emails, chat messages, landing pages. Pair with the skill actually producing the output (e.g. create-slides, edit-copy) rather than using standalone.
 ---
 
 # Audience archetypes
@@ -22,6 +22,18 @@ Lumenis spans two business units — Aesthetics and Vision — and physician/pra
 - [internal-team.md](internal-team.md) — Sales / Channel Partner, Executive Team
 
 Read the relevant file(s) for the request at hand rather than all three — e.g. an Aesthetics KOL deck only needs aesthetics-archetypes.md.
+
+## Correspondence register
+
+For one-to-one correspondence (email, chat/Teams messages — anything addressed to a specific person rather than a broad audience), the archetype above sets *what* to emphasize, but not *how warm or formal* to sound in the moment — that depends on where the relationship stands and what the message needs to accomplish. Layer one of these registers on top of the archetype's tone rather than picking a single fixed voice:
+
+- **Polished / first touch** — new or early-stage contact. More formal, no assumed familiarity, leads with credibility.
+- **Warm / rapport-built** — an established relationship. Personal touches (referencing prior conversations, shared history) are welcome; still professional.
+- **Executive / elevated** — needs to read more senior or more accountable, e.g. a partnership follow-up going to leadership. Tighten structure, lead with commitments/deliverables rather than pleasantries, cut casual phrasing.
+- **Diplomatic / de-escalating** — the content is corrective, stern, or addresses conflict, but shouldn't read as accusatory or inflammatory. Soften word choice and frame asks positively while keeping the seriousness intact — don't dilute the message into mush.
+- **Concise / practical** — strip pleasantries and hedging; get to the point. Good for a second pass after a draft reads too padded or "fluffy."
+
+If the request doesn't name a register, infer it from context (e.g. "make it sound more executive" → Executive/elevated; "soften this without being accusatory" → Diplomatic/de-escalating) and it's often useful to offer two variants spanning nearby registers (e.g. Warm vs. Polished) rather than committing to one, since the right level is easy to calibrate once the person sees both.
 
 ## Notes
 
