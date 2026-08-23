@@ -1,6 +1,6 @@
 # Internal team archetypes
 
-## Sales / Channel Partner
+## Sales
 Internal reps or distributors who need to represent the product to others.
 - **Cares about**: clear talking points, competitive positioning, objection handling, what makes this product easy to sell.
 - **Tone**: direct, scannable, arms them to repeat it confidently to someone else.
