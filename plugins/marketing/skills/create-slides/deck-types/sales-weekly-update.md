@@ -16,4 +16,4 @@ A short, recurring deck for a weekly field-sales call — the main forum for sha
 
 Output the same plain-markdown deck format as any other deck (see the parent [SKILL.md](../SKILL.md)), but include the talk track and rep action inline per slide (as extra labeled lines, not just speaker notes) since both are core to this deck type, not optional detail.
 
-Tone: energetic but earned — see [core:audience-archetypes](../../../../core/skills/audience-archetypes/SKILL.md)'s Sales/Channel Partner persona. Arms reps to repeat the message forward, so keep language concrete and quotable rather than abstract.
+Tone: energetic but earned — see [core:audience-archetypes](../../../../core/skills/audience-archetypes/SKILL.md)'s Sales persona. Arms reps to repeat the message forward, so keep language concrete and quotable rather than abstract.
