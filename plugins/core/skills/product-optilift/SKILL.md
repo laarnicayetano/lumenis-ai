@@ -5,28 +5,31 @@ description: Context for OptiLIFT specifically — its target audience, key talk
 
 # OptiLIFT
 
-Non-invasive, in-office optical energy device for facial and neck skin tightening/contouring — a premium capital device sold to aesthetic and dermatology practices, with matching patient-facing marketing materials. OptiLIFT is one of Lumenis' Vision-adjacent device lines; materials always tie back to the parent brand via a "by Lumenis" endorsement lockup. It ships facial-contouring copy closer to Aesthetics positioning — treat it as its own line rather than assuming either family's defaults.
+**Correction (verified against lumenis.com, 2026-08-24): OptiLIFT is NOT an optical/light-energy device — that was wrong in an earlier version of this file.** It's a non-invasive, in-office **periorbital (eye-area) device** using DMSt™ (Dynamic Muscle Stimulation — electrical impulses) plus optional RF, for lower lid laxity, impaired blinking, and evaporative dry eye disease. It's a premium capital device sold primarily to eye-care practices, with matching patient-facing marketing materials. OptiLIFT is one of Lumenis' Vision-adjacent device lines; materials always tie back to the parent brand via a "by Lumenis" endorsement lockup.
 
 Reference: https://lumenis.com/vision/products/optilift/
 
 ## Target audience
-- Aesthetic and dermatology practices (capital-equipment buyer).
-- Patients seeking non-invasive facial and neck skin tightening/contouring, no downtime.
+- Eye-care practitioners — ophthalmologists and optometrists — as the primary capital-equipment buyer (not general aesthetic/dermatology practices).
+- Patients with lower lid laxity, impaired blinking, or evaporative dry eye disease (often as young as their 30s) — functional/therapeutic need first, aesthetic lift second.
 
 ## Talking points
+- Core positioning is functional/therapeutic, not primarily cosmetic: treats lower lid laxity, impaired blinking, and evaporative dry eye (meibomian gland dysfunction) — aesthetic lift is a secondary benefit.
 - Non-invasive, in-office procedure — no downtime.
-- Visible, natural-looking lift and contouring results.
-- Voice: confident, clinical-premium, reassuring. Short declarative headlines ("Restore your natural lift"), softer explanatory copy underneath. No hype, no exclamation points, no emoji. Claims are grounded ("no downtime," "visible results") rather than superlative.
+- Cited clinical stats: ~75% reduction in lower lid laxity, ~70% improvement in blinking quality, ~78% reduction in MGD scores (verify current figures before external use).
+- Regulatory status is unsettled in current site content: Health Canada approved (for evaporative dry eye disease), but at least one Lumenis page explicitly states OptiLIFT is not FDA-approved while another describes US availability — **do not state FDA clearance/availability without confirming current status first.**
+- Voice: confident, clinical-premium, reassuring. Short declarative headlines, softer explanatory copy underneath. No hype, no exclamation points, no emoji. Claims are grounded rather than superlative.
 - Person: second person to the patient in headlines ("your," "you"); more descriptive third-person for provider/product copy ("OptiLIFT delivers…").
-- Vibe: aspirational-clinical — closer to a dermatology practice than a consumer beauty brand.
-- Naming: the sibling product is `OptiLIGHT` — capital L-I-G-H-T, matching `OptiLIFT`. Never `OptiLight` or `Optilight`. Don't confuse the two products in copy.
+- Vibe: aspirational-clinical — closer to a dermatology/eye-care practice than a consumer beauty brand.
+- Naming: the sibling product is `OptiLIGHT` — capital L-I-G-H-T, matching `OptiLIFT`. Never `OptiLight` or `Optilight`. Don't confuse the two — OptiLIGHT is the light-based (IPL) device, OptiLIFT is the electrical-stimulation device. Also part of the same "Opti-" family: OptiPLUS, OPT Shields.
 
 ## Features
-- Optical energy device for facial and neck skin tightening/contouring.
-<!-- Further technical/clinical specs not yet provided. -->
+- DMSt™ (Dynamic Muscle Stimulation): electrical impulses activate/tone periorbital muscles; optional RF component for heat/collagen.
+- Typical protocol: 4 sessions, one week apart, ~14 minutes per session.
+- Contraindicated for patients with pacemakers, defibrillators, or other implanted electronic devices (electrical-stimulation mechanism).
 
 ## Competitors
-<!-- Not yet provided. -->
+- Positioned against surgical eyelid procedures as the non-invasive alternative — no named device competitor found in current Lumenis marketing content.
 
 ## How to use this
 - Keep messaging consistent with the marketing positioning pillars.

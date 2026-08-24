@@ -11,11 +11,14 @@ Reference: https://lumenis.com/vision/products/optilight/
 
 ## Target audience
 - Eye-care professionals and practice owners (capital-equipment buyer).
-- Patients with dry eye disease (DED) / meibomian gland dysfunction (MGD).
+- Patients with dry eye disease (DED) / meibomian gland dysfunction (MGD), typically Fitzpatrick I–IV, age 22+.
+- Market scale cited: ~49 million Americans have DED (only about half diagnosed); MGD accounts for ~86% of DED cases.
 
 ## Talking points
-- First and only IPL FDA-cleared for the management of dry eye disease (DED/MGD).
+- First and only IPL FDA-cleared for the management of dry eye disease (DED/MGD). FDA De Novo authorization granted April 29, 2021.
 - Built on patented Optimal Pulse Technology (OPT™).
+- Procedure: ~10–15 minutes per session, typically 4 sessions over 2–4 weeks, minimal-to-no downtime, maintenance every 6–12 months.
+- Awards: 2022 MedTech Breakthrough Award (Best New Technology Solution for Ophthalmology).
 - Voice: warm, optimistic, quietly premium — clinical credibility with human softness. Sits between a luxury-beauty brand and a medical device manufacturer, never fully either. Lean on words like "healing energy," "relief," "elevation," "warmth," "innovation" — avoid fear-based or heavily clinical language in consumer copy.
 - No emoji, ever.
 - Person: addresses both the eye-care professional ("the procedure **you** want") and the patient ("the therapy **your patients** need") — know which you're writing for.

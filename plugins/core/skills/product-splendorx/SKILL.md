@@ -19,7 +19,8 @@ Splendor X is a laser hair removal platform (an upgrade to the original system) 
 
 ## Features
 - Used primarily for hair removal and secondarily for vascular/pigmented lesions.
-- Available markets: EMEA, US.
+- FDA-cleared for simultaneous dual-wavelength (755nm + 1064nm) emission — Lumenis states this is the only device with this specific clearance.
+- Available markets: EMEA, US — also confirmed available in Canada and Australia.
 <!-- Pricing, service/support model, and adverse-event data exist but are internal/operational — confirm before using in external-facing copy. -->
 
 ## Competitors
