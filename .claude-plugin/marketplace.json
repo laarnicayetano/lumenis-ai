@@ -5,7 +5,7 @@
     "email": "laarnicayetano@proton.me"
   },
   "metadata": {
-    "description": "Shared Lumenis skills: brand context, design system, per-product context, and marketing tooling.",
+    "description": "Shared Lumenis skills: brand context, per-product context, and marketing tooling.",
     "version": "0.0.1"
   },
   "plugins": [
@@ -24,10 +24,9 @@
       "name": "marketing",
       "displayName": "Marketing v0.15.0",
       "source": "./plugins/marketing",
-      "description": "v0.15.0 \u2014 Marketing positioning, the new-product skill generator, workflow automations, and the version checker.",
+      "description": "v0.15.0 \u2014 Workflow automations and the version checker.",
       "category": "marketing",
       "tags": [
-        "positioning",
         "workflows",
         "tooling"
       ]

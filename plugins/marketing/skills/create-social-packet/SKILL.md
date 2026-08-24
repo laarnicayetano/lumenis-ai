@@ -43,7 +43,7 @@ For each platform:
 - Suggested link placement (see [references/platforms.md](references/platforms.md) — LinkedIn and Instagram handle this differently).
 - Alt text for the image, if an image exists for that post.
 
-Draft the copy following the platform's tone and structure in [references/platforms.md](references/platforms.md), grounded in [marketing:positioning](../positioning/SKILL.md) and [core:brand-context](../../../core/skills/brand-context/SKILL.md) for voice, and the relevant [core:audience-archetypes](../../../core/skills/audience-archetypes/SKILL.md) persona for what the audience actually cares about. Never write the same caption verbatim for both platforms.
+Draft the copy following the platform's tone and structure in [references/platforms.md](references/platforms.md), grounded in [core:brand-context](../../../core/skills/brand-context/SKILL.md) for voice, and the relevant [core:audience-archetypes](../../../core/skills/audience-archetypes/SKILL.md) persona for what the audience actually cares about. Never write the same caption verbatim for both platforms.
 
 ### Images
 
@@ -63,5 +63,5 @@ Include a short compliance reminder inline in the email — pull the key points 
 
 - This is one email, not a zip or folder — if code execution isn't available for image formatting, still send the email with the copy/links/specs, just note that images need to be sourced/formatted separately.
 - Always confirm platform(s) and campaign name before drafting.
-- Pair with [marketing:positioning](../positioning/SKILL.md), [core:brand-context](../../../core/skills/brand-context/SKILL.md), and [core:audience-archetypes](../../../core/skills/audience-archetypes/SKILL.md) for voice and tone; see [references/platforms.md](references/platforms.md) for LinkedIn/Instagram specifics.
+- Pair with [core:brand-context](../../../core/skills/brand-context/SKILL.md) and [core:audience-archetypes](../../../core/skills/audience-archetypes/SKILL.md) for voice and tone; see [references/platforms.md](references/platforms.md) for LinkedIn/Instagram specifics.
 - If asked to support a platform beyond LinkedIn/Instagram, say this skill is currently scoped to just those two rather than improvising specs for a platform it hasn't been built for.
