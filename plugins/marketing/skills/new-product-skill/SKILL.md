@@ -8,6 +8,11 @@ description: Scaffold a new, consistent product skill for Lumenis. Use when the 
 Creates one consistent skill for a new product, matching the pattern in
 `core/skills/product-example/`.
 
+## Sources to check
+
+- https://lumenis.com/vision-sitemap.xml
+- https://lumenis.com/aesthetics-sitemap.xml
+
 ## Steps to follow when invoked
 
 1. Ask the user for:
@@ -15,13 +20,22 @@ Creates one consistent skill for a new product, matching the pattern in
    - Product slug (kebab-case, e.g. "laser-x")
    - One-line description of the product
    - (Optional) known audience, talking points, features, competitors
-2. Produce ONE SKILL.md file, mirroring `core/skills/product-example/`:
+2. Fetch both sitemaps above and find every URL that relates to this product
+   (matching the product name or slug — check both, since a product can
+   appear in either the Vision or Aesthetics sitemap, or occasionally both).
+   Fetch each matching page and use it as source material for the template
+   sections below — target audience, talking points, features, competitors.
+   Prefer this over inventing content, but user-supplied info from step 1
+   takes precedence if it conflicts with a page. Note in the skill body (or
+   to the user) if no matching URLs were found, rather than leaving sections
+   silently unsourced.
+3. Produce ONE SKILL.md file, mirroring `core/skills/product-example/`:
    - `core/skills/product-<slug>/SKILL.md`
-3. Set the frontmatter `name` to `product-<slug>`, and write a description that:
+4. Set the frontmatter `name` to `product-<slug>`, and write a description that:
    - names the product explicitly ("Context for <Name> specifically…")
    - says to ASK which product if a request is ambiguous
    - says NOT to use it for other products
-4. Use this template for the body:
+5. Use this template for the body:
 
 ```markdown
 ---
@@ -55,9 +69,10 @@ description: Context for <Name> specifically — its target audience, key talkin
 - If it's unclear which product a request is about, ask first.
 ```
 
-5. Fill any provided content into the matching sections; leave `<!-- comment -->`
-   placeholders for anything not provided. Never invent brand facts.
-6. Tell the user the exact save path, and remind them:
+6. Fill in the matching sections using user-supplied content and the sitemap
+   pages fetched in step 2; leave `<!-- comment -->` placeholders for
+   anything not covered by either. Never invent brand facts.
+7. Tell the user the exact save path, and remind them:
    "Commit this to core/skills/product-<slug>/, bump core's version
    (scripts/bump_version.py core minor), rebuild zips, and redistribute."
 
@@ -65,4 +80,7 @@ description: Context for <Name> specifically — its target audience, key talkin
 
 - Descriptions must disambiguate by product name — this is what prevents the
   wrong product skill firing on an ambiguous request.
+- Ground the skill in the sitemap pages found in step 2, not just what the
+  user types in step 1 — those pages are the primary source of truth for
+  audience, talking points, features, and competitors.
 - Never invent brand facts; use placeholders when unknown.
