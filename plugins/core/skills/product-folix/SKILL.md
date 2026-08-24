@@ -36,5 +36,4 @@ FoLix is a hair regrowth device: a 1565 nm class 4 non-ablative fractional laser
 
 ## How to use this
 - Keep messaging consistent with the marketing positioning pillars.
-- Use the global design-system skill for visuals — this product has no design overrides documented yet.
 - If it's unclear which product a request is about, ask first.

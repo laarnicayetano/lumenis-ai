@@ -34,20 +34,24 @@ description: Context for <Name> specifically — its target audience, key talkin
 <!-- One-line description of the product. -->
 
 ## Target audience
+
 <!-- Who buys/uses it. Pain points. -->
 
 ## Talking points
+
 <!-- Messages that land for this audience. -->
 
 ## Features
+
 <!-- Key features mapped to benefits. -->
 
 ## Competitors
+
 <!-- Named competing products/approaches, if known. -->
 
 ## How to use this
+
 - Keep messaging consistent with the marketing positioning pillars.
-- Use the global design-system skill for visuals — this product has no design overrides documented yet.
 - If it's unclear which product a request is about, ask first.
 ```
 
@@ -62,7 +66,3 @@ description: Context for <Name> specifically — its target audience, key talkin
 - Descriptions must disambiguate by product name — this is what prevents the
   wrong product skill firing on an ambiguous request.
 - Never invent brand facts; use placeholders when unknown.
-- No design-overrides skill for now — there isn't enough visual/brand
-  information to justify a separate skill per product. If a product later
-  gets confirmed design deltas from the global design-system, revisit this
-  generator to add one back in rather than improvising the format ad hoc.

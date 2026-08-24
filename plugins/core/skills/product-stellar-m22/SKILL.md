@@ -28,5 +28,4 @@ Stellar M22 is a multi-application platform (an upgrade from the M22 device, rel
 
 ## How to use this
 - Keep messaging consistent with the marketing positioning pillars.
-- Use the global design-system skill for visuals — this product has no design overrides documented yet.
 - If it's unclear which product a request is about, ask first.
