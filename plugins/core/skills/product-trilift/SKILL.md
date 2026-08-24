@@ -5,23 +5,26 @@ description: Context for triLift specifically — its target audience, key talki
 
 # triLift
 
-triLift is a triple-modality RF platform offering three different treatments — RFMN, TriPollar RF, and DMSt — that together target multiple layers of the skin: muscle, skin, and volume.
+triLift is a triple-modality RF platform offering three different treatments — triFX™ (radiofrequency microneedling, formerly referred to internally as RFMN), TriPollar RF, and DMSt (Dynamic Muscle Stimulation) — that together target multiple layers of the skin: muscle, skin, and volume. Launched March 2022 (first shown at the 2022 AAD Annual Meeting). Available in the US, Canada, and Australia.
 
 ## Target audience
 - Consumers seeking a natural alternative to injectables.
 - Positioned as the next step in a GLP-1 patient's journey (addressing skin laxity after weight loss).
-- Market context (2024 New Beauty State of Aesthetics Report): 62% of surveyed consumers want to treat loose/sagging skin; ~50% want to treat muscle tone or definition.
+- Also marketed directly to practitioners — dermatologists, plastic surgeons, and med spas looking to differentiate their practice and add a new revenue line.
+- Market context (2024 New Beauty State of Aesthetics Report): 62% of surveyed consumers want to treat loose/sagging skin; ~50% want to treat muscle tone or definition. A separate stat cited: 73% of consumers consider mid-face lines/wrinkles/folds a top concern.
 
 ## Talking points
 - Natural alternative to injectables.
 - Triple modality platform — targets muscle, skin, and volume in one device.
 - No downtime, comfortable, safe for all skin types.
+- ~20–30 minute treatment protocol; results described as immediately visible and improving with each additional session.
+- Awards: MedEsthetics 2025 Readers' Choice Awards — "Best Non-Invasive Facelifting Device" and "Best Light & Energy-Based Device."
 
 ## Features
-### RFMN
+### triFX™ (radiofrequency microneedling)
 - MOA: RF thermal coagulation and promotion of neocollagenesis via controlled natural wounding.
 - Tip sizes: 6x2, 6x6, 7x7, 10x10; ultrathin needles don't require numbing.
-- Clinical data: stimulates 3x natural hyaluronic acid; tightens and smooths skin texture.
+- Clinical data: stimulates 3x natural hyaluronic acid; tightens and smooths skin texture; also cited elsewhere as increasing skin smoothness by 80%.
 
 ### TriPollar RF
 - MOA: induced focused RF heating to target facial wrinkle reduction, and thicken and strengthen the dermal layer.
