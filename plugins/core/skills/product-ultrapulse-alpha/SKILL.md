@@ -31,5 +31,4 @@ Ultrapulse Alpha is Lumenis's next-generation CO2 laser device, launched in 2023
 
 ## How to use this
 - Keep messaging consistent with the marketing positioning pillars.
-- Use the global design-system skill for visuals — this product has no design overrides documented yet.
 - If it's unclear which product a request is about, ask first.
