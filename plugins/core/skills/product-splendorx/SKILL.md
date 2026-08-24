@@ -19,7 +19,7 @@ Splendor X is a laser hair removal platform (an upgrade to the original system) 
 
 ## Features
 - Used primarily for hair removal and secondarily for vascular/pigmented lesions.
-- Available markets: EMEA (launched), Canada (upcoming).
+- Available markets: EMEA, US.
 <!-- Pricing, service/support model, and adverse-event data exist but are internal/operational — confirm before using in external-facing copy. -->
 
 ## Competitors
