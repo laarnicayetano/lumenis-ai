@@ -95,4 +95,4 @@ Sometimes the input isn't a topic to build from but an existing deck's content o
 
 - This skill only produces the text-form deck. It does not render to PDF/PPTX/HTML — that's a separate future step, and when it's built it should use a pure-Python approach (e.g. python-pptx / reportlab) rather than a browser-dependent renderer, so it works reliably wherever this skill runs (including claude.ai's sandboxed environment).
 - Always load [core:audience-archetypes](../../../core/skills/audience-archetypes/SKILL.md) unless the user has already made the audience explicit.
-- Pair with [marketing:positioning](../positioning/SKILL.md) and [core:brand-context](../../../core/skills/brand-context/SKILL.md) for company voice underneath whatever audience-specific tone applies.
+- Pair with [core:brand-context](../../../core/skills/brand-context/SKILL.md) for company voice underneath whatever audience-specific tone applies.
