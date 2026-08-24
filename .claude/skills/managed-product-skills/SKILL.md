@@ -115,6 +115,13 @@ description: Context for <Name> specifically — its target audience, key talkin
 - Never invent brand facts; use placeholders when unknown.
 - On update, never silently overwrite existing user-authored content — merge
   and flag conflicts instead.
+- **Never include pricing.** No prices, price ranges, per-session costs, or
+  ROI/revenue projections built from a price (e.g. "$X per session ×
+  Y sessions"), even if a source (a sitemap page, a pitch deck, etc.)
+  states one. Omit that material entirely rather than summarizing it —
+  don't launder a dollar figure into a vaguer form. Qualitative business
+  value (e.g. "positioned as a new revenue stream for practices") is fine;
+  the line is any actual number tied to cost or revenue.
 
 ## Platform notes
 
