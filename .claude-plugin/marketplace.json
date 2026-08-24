@@ -11,19 +11,26 @@
   "plugins": [
     {
       "name": "core",
-      "displayName": "Core v0.5.0",
+      "displayName": "Core v0.6.0",
       "source": "./plugins/core",
-      "description": "v0.5.0 \u2014 Install first. Company-wide brand context and per-product context skills.",
+      "description": "v0.6.0 \u2014 Install first. Company-wide brand context and per-product context skills.",
       "category": "foundation",
-      "tags": ["brand", "products"]
+      "tags": [
+        "brand",
+        "products"
+      ]
     },
     {
       "name": "marketing",
-      "displayName": "Marketing v0.13.0",
+      "displayName": "Marketing v0.14.0",
       "source": "./plugins/marketing",
-      "description": "v0.13.0 \u2014 Marketing positioning, the new-product skill generator, workflow automations, and the version checker.",
+      "description": "v0.14.0 \u2014 Marketing positioning, the new-product skill generator, workflow automations, and the version checker.",
       "category": "marketing",
-      "tags": ["positioning", "workflows", "tooling"]
+      "tags": [
+        "positioning",
+        "workflows",
+        "tooling"
+      ]
     }
   ]
 }
