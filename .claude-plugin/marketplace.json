@@ -11,9 +11,9 @@
   "plugins": [
     {
       "name": "core",
-      "displayName": "Core v0.7.0",
+      "displayName": "Core v0.8.0",
       "source": "./plugins/core",
-      "description": "v0.7.0 \u2014 Install first. Company-wide brand context and per-product context skills.",
+      "description": "v0.8.0 \u2014 Install first. Company-wide brand context and per-product context skills.",
       "category": "foundation",
       "tags": [
         "brand",
@@ -22,9 +22,9 @@
     },
     {
       "name": "marketing",
-      "displayName": "Marketing v0.15.0",
+      "displayName": "Marketing v0.16.0",
       "source": "./plugins/marketing",
-      "description": "v0.15.0 \u2014 Workflow automations and the version checker.",
+      "description": "v0.16.0 \u2014 Workflow automations and the version checker.",
       "category": "marketing",
       "tags": [
         "workflows",
