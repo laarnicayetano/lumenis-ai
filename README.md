@@ -7,7 +7,7 @@ Shared Lumenis skills, organized as a plugin marketplace.
 | Plugin      | Install                | Description                                                                                |
 | ----------- | ---------------------- | ------------------------------------------------------------------------------------------ |
 | `core`      | `core@lumenis-ai`      | Brand context, global design system, per-product context/design skills. **Install first.** |
-| `marketing` | `marketing@lumenis-ai` | Positioning, new-product generator, image/HubSpot workflows.                               |
+| `marketing` | `marketing@lumenis-ai` | Positioning, image/HubSpot workflows.                                                       |
 
 ## Installing
 
@@ -32,6 +32,15 @@ change"). A repo-local skill
 opens a GitHub PR for you, labeled with a suggested version bump
 (`bump:patch` / `bump:minor` / `bump:major` / `bump:none`). You don't need to
 know git or semantic versioning.
+
+To add or update a product's context skill specifically, ask Claude to "set
+up a skill for a new product" or "update the skill for <product>" — a
+repo-local skill
+([.claude/skills/managed-product-skills](.claude/skills/managed-product-skills/SKILL.md))
+handles both, sourced from the Lumenis Vision/Aesthetics sitemaps, then ships
+via `propose-plugin-change` above. This one is repo-local (not part of any
+plugin) since its output — a file under `core/skills/` — only makes sense
+inside this repo.
 
 A reviewer checks the PR (and can change the bump label if needed), then
 merges it. Once merged, `.github/workflows/version-bump.yml` automatically
