@@ -11,9 +11,9 @@
   "plugins": [
     {
       "name": "core",
-      "displayName": "Core v0.6.0",
+      "displayName": "Core v0.7.0",
       "source": "./plugins/core",
-      "description": "v0.6.0 \u2014 Install first. Company-wide brand context and per-product context skills.",
+      "description": "v0.7.0 \u2014 Install first. Company-wide brand context and per-product context skills.",
       "category": "foundation",
       "tags": [
         "brand",
