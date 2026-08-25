@@ -36,8 +36,7 @@ does not run `bump_version.py` or `build_zips.py` itself.
      PRIVATE KEY-----`, bearer tokens, `.env`-style `KEY=value` secrets)
    - Real customer/personal data (names + emails, phone numbers, addresses,
      account IDs) rather than placeholder/example data
-   - Internal-only material that reads as confidential (unreleased pricing,
-     unannounced product names, internal strategy docs, financial figures)
+   - Internal-only material that reads as confidential (unreleased pricing, unannounced product names, internal strategy docs, financial figures) <!-- confidential-ok: describes the category, not an actual instance -->
 
    If you find any of this, **stop — do not commit, push, or open a PR.**
    Tell the user plainly what you found and where, and let them decide
