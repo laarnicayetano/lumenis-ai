@@ -1,0 +1,24 @@
+name: Check confidential content
+
+# Hard lint backstop (not just relying on Claude/human review) for
+# unreleased-product leaks: flags keywords like "upcoming"/"NPI"/"embargo"
+# and any date past today in skill markdown. This repo is public.
+# A genuine false positive can be suppressed inline -- see
+# scripts/check_confidential_content.py for the override syntax.
+
+on:
+  pull_request:
+    paths:
+      - "plugins/**/*.md"
+      - ".claude/skills/**/*.md"
+      - "scripts/check_confidential_content.py"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.x"
+      - run: python3 scripts/check_confidential_content.py
