@@ -1,0 +1,22 @@
+name: Check markdown links
+
+# Fails the PR if any skill's markdown links to a relative path that
+# doesn't exist — catches renames/removals (like a deleted skill) that
+# leave other skills pointing at nothing. See scripts/check_markdown_links.py.
+
+on:
+  pull_request:
+    paths:
+      - "plugins/**/*.md"
+      - ".claude/skills/**/*.md"
+      - "scripts/check_markdown_links.py"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.x"
+      - run: python3 scripts/check_markdown_links.py
