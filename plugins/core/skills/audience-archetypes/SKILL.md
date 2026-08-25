@@ -38,4 +38,4 @@ If the request doesn't name a register, infer it from context (e.g. "make it sou
 ## Notes
 
 - If a new recurring audience shows up that doesn't fit these, add it here rather than improvising each time.
-- For company-wide voice underneath any archetype's specific tone, pair with [core:brand-context](../brand-context/SKILL.md) and [marketing:positioning](../../../marketing/skills/positioning/SKILL.md).
+- For company-wide voice underneath any archetype's specific tone, pair with [core:brand-context](../brand-context/SKILL.md).
