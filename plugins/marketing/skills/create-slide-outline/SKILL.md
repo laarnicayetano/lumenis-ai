@@ -1,5 +1,5 @@
 ---
-name: create-slides
+name: create-slide-outline
 description: Build a slide deck as plain, clearly-labeled markdown text, or restructure the narrative flow of a deck that already has content. Use when the user wants a presentation, slide deck, or deck outline built from a topic/key points or existing long-form content — or when they already have slide content/an outline and want the story reviewed, re-sequenced, or fixed (e.g. a QBR deck that needs better flow, a stronger "ask" slide, or a better executive summary). Recognizes named recurring deck types (QBR, close meeting, AOP, sales weekly update) with their own default structure. Pair with the audience-archetypes skill to match tone/depth to who the deck is for.
 ---
 
@@ -20,6 +20,20 @@ Also establish, before or while drafting:
 - **Audience** — load [core:audience-archetypes](../../../core/skills/audience-archetypes/SKILL.md) and match tone/depth/emphasis to whichever persona(s) apply. If it's not clear from the request, ask.
 - **Purpose/context** — what's this deck for (e.g. KOL training, sales pitch, internal update, conference talk)? This affects which slide types belong.
 - **Roughly how many slides** — if not specified, use your judgment based on the amount of source content, but default toward fewer, denser slides over many thin ones.
+
+## Pick a density mode before laying out a single slide
+
+**Low density / speaker-led** — for a live talk where a presenter carries the
+room. One idea per slide, 1–3 bullets max, large type, generous negative
+space. Expect more slides, not more content per slide.
+
+**High density / reading-first** — for a leave-behind or async read. Slides
+are self-contained: 4–8 bullets, or 4–6 cards, structured with grids/tables
+rather than prose. Still designed, not "a document pasted onto a slide" —
+tight spacing is not an excuse to drop hierarchy.
+
+Pick one mode for the whole deck. Don't mix — a dense stats slide next to an
+airy title slide reads as unplanned, not intentional contrast.
 
 ## Output format
 
@@ -85,8 +99,10 @@ Sometimes the input isn't a topic to build from but an existing deck's content o
 
 ## Brevity rules
 
+These apply within whichever density mode was picked above — they cap bullets per mode, not override the mode's own range.
+
 - One idea per slide. If a slide needs two, split it.
-- Max ~5–6 bullets per slide.
+- Max 1–3 bullets per slide in low-density mode; max 4–8 in high-density mode.
 - Bullets are short phrases, not full sentences — this is a presentation aid, not a document.
 - Cut ruthlessly. If a point doesn't support the deck's purpose or audience, leave it out rather than including it "just in case."
 - Speaker notes are the place for detail, caveats, and context — not the slide itself.
