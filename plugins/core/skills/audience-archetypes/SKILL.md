@@ -1,6 +1,6 @@
 ---
 name: audience-archetypes
-description: Lumenis audience personas — who a piece of communication is for, what they care about, and how to talk to them — plus a correspondence register dial (polished/warm/executive/diplomatic/concise) for one-to-one messages. Use whenever tone, content, or depth needs to adapt to a specific audience or relationship stage — presentations, slide decks, emails, chat messages, landing pages. Pair with the skill actually producing the output (e.g. create-slides, edit-copy) rather than using standalone.
+description: Lumenis audience personas — who a piece of communication is for, what they care about, and how to talk to them — plus a correspondence register dial (polished/warm/executive/diplomatic/concise) for one-to-one messages. Use whenever tone, content, or depth needs to adapt to a specific audience or relationship stage — presentations, slide decks, emails, chat messages, landing pages. Pair with the skill actually producing the output (e.g. create-slide-outline, edit-copy) rather than using standalone.
 ---
 
 # Audience archetypes
