@@ -5,7 +5,7 @@
     "email": "laarnicayetano@proton.me"
   },
   "metadata": {
-    "description": "Shared Lumenis skills: brand context, per-product context, and marketing tooling.",
+    "description": "Shared Lumenis skills: brand context, per-product context, the real design system, and marketing tooling.",
     "version": "0.0.1"
   },
   "plugins": [
@@ -29,6 +29,21 @@
       "tags": [
         "workflows",
         "tooling"
+      ]
+    },
+    {
+      "name": "design-system",
+      "displayName": "Design System",
+      "source": {
+        "source": "github",
+        "repo": "laarnicayetano/lumenis-design-system"
+      },
+      "description": "The real Lumenis design system \u2014 color tokens, typography, components, and per-product design-override skills. Lives in its own repo (source of truth); not vendored here, so this entry always tracks its current master. Version is managed by that repo, not this one.",
+      "category": "foundation",
+      "tags": [
+        "brand",
+        "design-system",
+        "products"
       ]
     }
   ]
