@@ -12,7 +12,7 @@ Produces a complete, ready-to-post job description for a Lumenis role. The compa
 Ask only for what you can't reasonably infer:
 
 - **Role title** — required.
-- **Department / business unit** — e.g. Marketing, Sales, Clinical, Product. If the role sits under a named business unit (Aesthetics, Vision) or supports a specific product, note it — it changes which context to load (see **Context to pull** below).
+- **Department / business unit** — e.g. If the role sits under a named business unit (Aesthetics, Vision) or supports a specific product, note it — it changes which context to load (see **Context to pull** below).
 - **Seniority / reporting line** — individual contributor, manager, director+; who they report to. Shapes structure (see **Structure**).
 - **What the user already knows** — any responsibilities, must-have qualifications, travel %, comp notes, or team size already decided. Treat these as fixed facts, not suggestions to soften or drop.
 - **Output format** — plain text or `.docx`. Ask if not specified.
@@ -24,12 +24,11 @@ Don't ask about market (always US) or core tech stack (always HubSpot + Salesfor
 
 - Always ground company framing (mission, tone, positioning) in [core:brand-context](../../../core/skills/brand-context/SKILL.md).
 - If the role sits in or supports **Aesthetics**, load [core:aesthetics](../../../core/skills/aesthetics/SKILL.md) for business-unit context. There's no equivalent business-unit-level skill for Vision yet — for a Vision role, rely on brand-context plus the specific product skill if one applies, and don't invent Vision-specific positioning that isn't there.
-- If the role is tied to a specific product (e.g. a product marketing specialist for OptiLIGHT), load that product's `core:product-*` skill so the "what you'll work on" framing uses real feature/positioning language rather than generic filler.
 - [core:audience-archetypes](../../../core/skills/audience-archetypes/SKILL.md) is occasionally useful for roles that engage a named external audience directly (e.g. a role working with KOLs or practice owners) — load it only when describing that interaction accurately matters, not as a default.
 
 ## Defaults (the company context, unless told otherwise)
 
-- **Market: US only.** No visa sponsorship language, no international-territory framing, no non-US compliance references. Travel language should describe travel *within* the US when relevant, not "international."
+- **Market: US only.** No visa sponsorship language, no international-territory framing, no non-US compliance references. Travel language should describe travel _within_ the US when relevant, not "international."
 - **B2B, direct field-sales collaboration.** Most roles should name how they work with the field sales team, not just marketing — this is a standing part of the operating model here, not a role-specific detail to invent case by case. See the marketing-automation-manager example for how territory/region-based sales alignment gets folded into daily responsibilities.
 - **Tech stack: HubSpot + Salesforce.** Bake these in wherever the role is genuinely CRM/marketing-ops/sales-ops facing (required or technical-skills section). Use judgment on where it doesn't belong — a pure creative/production role (see the event-production-manager example) legitimately has zero CRM tooling in it; forcing HubSpot/Salesforce into every JD regardless of fit reads as templated and undermines the rest of the document.
 

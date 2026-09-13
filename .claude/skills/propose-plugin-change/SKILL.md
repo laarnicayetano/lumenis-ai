@@ -18,10 +18,12 @@ does not run `bump_version.py` or `build_zips.py` itself.
 1. **Start from an up-to-date master before doing anything else**, so a new
    branch never forks off stale code or an old feature branch the user
    happens to be sitting on:
+
    ```
    git checkout master
    git pull origin master
    ```
+
    If there are uncommitted changes in the working tree that aren't related
    to what the user wants to publish, stop and ask rather than switching
    branches out from under them — don't discard or carry over unrelated work
@@ -33,7 +35,7 @@ does not run `bump_version.py` or `build_zips.py` itself.
 3. **Check for sensitive content.** This repo is
    public — read the actual diff content (not just filenames) and look for:
    - API keys, tokens, passwords, or credentials (e.g. `sk-`, `AKIA`, `-----BEGIN
-     PRIVATE KEY-----`, bearer tokens, `.env`-style `KEY=value` secrets)
+PRIVATE KEY-----`, bearer tokens, `.env`-style `KEY=value` secrets)
    - Real customer/personal data (names + emails, phone numbers, addresses,
      account IDs) rather than placeholder/example data
    - Internal-only material that reads as confidential (unreleased pricing, unannounced product names, internal strategy docs, financial figures) <!-- confidential-ok: describes the category, not an actual instance -->
@@ -58,42 +60,45 @@ does not run `bump_version.py` or `build_zips.py` itself.
      skill
    - **major** — a skill removed or renamed in a way that breaks existing
      references, restructured plugin layout
-   If truly ambiguous, ask the user in one short sentence rather than
-   guessing on a major bump. If a single PR touches multiple plugins, this
-   one level applies to all of them — split into separate PRs first if they
-   genuinely need different bump levels.
+     If truly ambiguous, ask the user in one short sentence rather than
+     guessing on a major bump. If a single PR touches multiple plugins, this
+     one level applies to all of them — split into separate PRs first if they
+     genuinely need different bump levels.
 
 6. **Create a branch and commit.**
+
    ```
    git checkout -b claude/<short-slug>
    git add <changed files>
    git commit -m "<plain-language summary of the change>"
    git push -u origin claude/<short-slug>
    ```
+
    Do not touch `plugin.json` or run the version scripts — that happens
    automatically after merge.
 
 7. **Open the PR** with the bump label attached:
+
    ```
    gh pr create --title "<summary>" --body "<what changed and why>" \
      --label "bump:<level>"
    ```
+
    (Labels `bump:none` / `bump:patch` / `bump:minor` / `bump:major` already
    exist on the repo.)
 
 8. **Switch back to master** once the branch is pushed and the PR is open:
+
    ```
    git checkout master
    ```
+
    Don't leave the working directory sitting on the just-opened PR branch —
    the next task should start clean, not accidentally stack changes onto a
    branch that's already up for review.
 
 9. **Report back in plain language**, e.g.:
-   > Opened a PR: <url>. I've labeled it `bump:patch`, but you (or a
-   > reviewer) can change the label before merging if a different bump makes
-   > more sense. Once it's merged, the version bump and a GitHub Release with
-   > the new zip happen automatically.
+   > Format should be the following "Opened [PR{number}](url) from `branch:{branchName}. Labeled as `bump:patch`".
 
 ## Notes
 
