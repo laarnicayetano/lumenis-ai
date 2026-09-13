@@ -131,7 +131,7 @@ The Marketing Automation Manager is responsible for developing, implementing, an
 - Technical integration issues log and resolution status
 - Pipeline influence report by campaign and territory
 - Weekly field sales enablement metrics
-- Upcoming campaign calendar updates by region <!-- confidential-ok: <reason> -->
+- Upcoming campaign calendar updates by region
 
 ### Monthly Deliverables
 
