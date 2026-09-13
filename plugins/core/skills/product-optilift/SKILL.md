@@ -31,6 +31,10 @@ Reference: https://lumenis.com/vision/products/optilift/
 ## Competitors
 - Positioned against surgical eyelid procedures as the non-invasive alternative — no named device competitor found in current Lumenis marketing content.
 
+## Claims reference
+
+[claims-reference.md](claims-reference.md) — a sourced audit of specific clinical/regulatory/epidemiological claims and stats used in OptiLIFT marketing materials (deck + brochure), with citations and a per-claim review status. Most rows are marked `needs review`, including likely citation mismatches — check status and qualifications there before citing an exact figure externally; `confirmed` rows still don't substitute for regulatory/legal review of new copy.
+
 ## How to use this
 - Keep messaging consistent with the marketing positioning pillars.
 - If it's unclear which product a request is about, ask first.
