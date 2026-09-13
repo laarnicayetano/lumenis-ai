@@ -1,12 +1,12 @@
 ---
 name: aesthetics
-description: Context for Lumenis's Aesthetics business unit — its positioning, technology platforms, product portfolio, and treatment categories. Use when writing copy, campaigns, or answering questions that span the Aesthetics line generally, rather than a single product. For a specific product (e.g. OptiLIGHT), use that product's own context skill instead. For Vision-side context, use the equivalent Vision context skill if one exists.
+description: Context for Lumenis's Aesthetics business unit — its positioning, technology platforms, product portfolio, and treatment categories. Use when writing copy, campaigns, or answering questions that span the Aesthetics line generally, rather than a single product. For a specific product (e.g. OptiLIGHT), use that product's own context skill instead. For Vision-side context, use core:vision.
 ---
 
 # Aesthetics business unit — context
 
-See `aesthetics.md` for positioning, technology platforms, the product
-portfolio, and treatment categories.
+See `aesthetics.md` for positioning, technology platforms, and treatment
+categories.
 
 ## How to use this
 
@@ -15,3 +15,6 @@ portfolio, and treatment categories.
 - Ground technology/product claims in `aesthetics.md`; don't invent specs.
 - Pair with `brand-context` for company-wide positioning and voice.
 - For tone/depth guidance tailored to who you're writing for (KOL, physician, practice owner, patient), see [audience-archetypes/aesthetics-archetypes.md](../audience-archetypes/aesthetics-archetypes.md).
+- For who actually buys and uses this — practice/channel types, patient segments — see [customers.md](customers.md).
+- For competitive landscape — which competitors actually matter and why — see [competitors.md](competitors.md).
+- For the product portfolio by category, see [product-portfolio.md](product-portfolio.md) — the single source for this; don't recreate a portfolio list elsewhere.
