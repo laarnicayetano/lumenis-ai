@@ -53,25 +53,9 @@ claim being made):
 
 ## Product portfolio
 
-- **Facial muscle stimulation:** triLift — combines three technologies for
-  non-invasive, face-lift-like results ("a new category in facial
-  stimulation aesthetics").
-- **Hair removal:** SPLENDOR X (Alexandrite & Nd:YAG, BLEND X technology,
-  high fluence, large spot size, built-in smoke evacuator); LightSheer
-  QUATTRO (diode, 805nm/1060nm, all skin types).
-- **Hair loss:** FoLix — recurring award recognition; partnership with
-  Bosley expanding market access (per resource hub coverage; not detailed
-  on the products page itself).
-- **Skin solutions:** Stellar M22 (30+ IPL/laser treatments — resurfacing,
-  rejuvenation, lesion removal); ULTRApulse Alpha (CO2, single-treatment
-  results); AcuPulse (ablative CO2, acne scars/pigmentation/resurfacing);
-  Legend Pro / Legend Pro+ (RF microneedling + TriPollar); M22
-  (multi-application IPL/laser).
-- **Body contouring:** NuEra Tight — FocalRF technology for fat reduction,
-  skin tightening, cellulite, and wrinkle reduction.
-- **Women's health:** FemTouch (fractional CO2 for vaginal health via
-  epithelium remodeling); AcuPulseW (ablative resurfacing, combined
-  aesthetic + women's health use).
+See [product-portfolio.md](product-portfolio.md) — the single source for the
+product portfolio, organized by category with a one-line pitch each. Don't
+recreate a portfolio list here.
 
 ## Treatment categories
 

@@ -55,27 +55,9 @@ without a Vision-specific source).
 
 ## Product portfolio
 
-- **Dry eye:** OptiLIGHT (IPL; positioned as the first and only IPL
-  FDA-cleared for DED/MGD management in the US), OptiPLUS (dual-frequency
-  RF; FDA-cleared; complements OptiLIGHT and also targets facial skin
-  rejuvenation as an adjunct), Optima IPL (an IPL platform distinct from
-  OptiLIGHT in Lumenis's current materials — confirm positioning/differences
-  before using both names in the same piece), OPT Shields (protective
-  accessory used during IPL treatment), Antares (corneal topographer for
-  dry eye diagnostics — a diagnostic instrument, not a treatment device).
-- **Lower eyelid laxity:** OptiLIFT (DMSt; non-surgical, no downtime,
-  addresses impaired blinking and evaporative dry eye alongside eyelid
-  laxity — see `core:product-optilift` for full detail).
-- **Glaucoma (SLT/YAG):** Digital Duet ("the first and only all-in-one
-  digital platform for Glaucoma and PCO therapies"), Digital Trio (3-in-1,
-  glaucoma + retina care), Smart Selecta Duet (SLT + YAG), Smart Selecta
-  Trio (SLT + YAG + Smart532).
-- **Retina (photocoagulators):** Smart532™ (green, SmartPulse sub-threshold
-  technology), Array™ LaserLink™ (pattern scanning), Vision One
-  (multi-wavelength: green 532nm, yellow 577nm, red 659nm), Novus Spectra
-  (dual-port green, for OR and clinic), LIOs (laser indirect
-  ophthalmoscopes), LumeProbe™ (endo-photocoagulation laser probes).
-- **Diagnostic/surgical accessories:** Slit lamps, surgical probes.
+See [product-portfolio.md](product-portfolio.md) — the single source for the
+product portfolio, organized by category with a one-line pitch each. Don't
+recreate a portfolio list here.
 
 ## Condition categories
 
