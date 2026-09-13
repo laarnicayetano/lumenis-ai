@@ -1,21 +1,21 @@
 ---
 name: create-onboarding-plan
-description: Create or edit a 30-60-90 day onboarding plan for a new marketing hire, output as plain markdown text — never a .docx or artifact. Includes a market/category/competitive learning module (aesthetics market, energy-based device market, medspas, dermatology, plastic surgery, competitor SWOTs) building toward the new hire producing their own first marketing plan by day 90. The user takes it into Claude Design themselves for a polished layout if they want one. Use when the user wants a new-hire onboarding plan, 30-60-90 plan, or wants to edit an existing one.
+description: Create or edit a 30-60-90 day onboarding plan for a new marketing hire, output as a folder of four .docx files (Onboarding Plan, Competitors, Product Portfolio, Customer) — never plain text or an artifact. Requires the new hire's department (Aesthetics or Vision) up front, since three of the four files are pulled from that business unit's own skill content. Builds toward the new hire producing their own first marketing plan by day 90. Use when the user wants a new-hire onboarding plan, 30-60-90 plan, or wants to edit an existing one.
 ---
 
 # Onboarding plan writer
 
 Builds a 30-60-90 day onboarding plan for a new hire joining the marketing org. The plan is genuinely different by role — a field-facing product marketer and an internal marketing-ops hire don't get the same introductions or learning path — so role drives most of the content, not just the header.
 
-**The point of the plan is not just orientation.** By day 90 the new hire should be sharp on the portfolio, the category, and the competitive landscape, and should have applied that — together with whatever expertise they already brought in — to a first real marketing plan or point of view. Every learning module below builds toward that, not toward a stack of read-only reference material.
+**Key outcome — the point of the plan is not just orientation.** By day 90 the new hire should be sharp on the portfolio, the category, and the competitive landscape, and should have turned that into a robust marketing plan that does two specific things: (1) takes a point of view on how Lumenis should move as the market and consumer behavior move — not just a description of where things stand today — and (2) visibly applies the expertise _they themselves_ brought to Lumenis, named explicitly rather than left implicit. Every learning module below builds toward that outcome, and none of it is read-only — see **Feedback loop** below. Reading without reporting back doesn't count as progress.
 
 ## Input
 
 Always required — ask if not given:
 
 - **New hire name**
+- **Department — Aesthetics or Vision.** Required before drafting, not inferred from the role title: three of the four output files (Competitors, Product Portfolio, Customer) are pulled directly from that business unit's own skill content, so the skill cannot proceed without knowing which one applies. If the role genuinely spans both or sits outside either (e.g. a corporate/shared-services role), say so rather than guessing — don't default to one.
 - **Role** — the title. This drives almost everything else; see **Role shapes the plan** below.
-- **Team** — which team/function they're joining.
 - **Start date**
 - **Manager**
 
@@ -29,56 +29,74 @@ Ask the user directly rather than guessing — these are decisions only they can
 
 Nice to have — use if the user provides them, otherwise leave a clearly-marked placeholder rather than inventing a name:
 
+- **Resume** — if the user supplies one (pasted or a file), read it in full and use it in place of a verbal summary for "what the new hire already brings": it grounds **Resume-informed tasks** (see Output) in specific, real evidence — named employers, tools, campaign types, quantified results — rather than a general impression. If both a resume and a verbal description are given, the resume is the more precise source for specifics; the verbal description still matters for anything the resume wouldn't show (soft skills, why they were hired, team fit).
 - Local sales rep (for the video call and ride-along)
 - Specific vendor contacts (PR, Marketing Agency, Event Production, AV, Social)
 
 ## Role shapes the plan
 
 - If a job description exists for this role, use it to learn realistic responsibilities, tools, and who the role actually works with — check [create-job-description's examples](../create-job-description/examples/) for a role that matches, or ask the user to paste the real JD. Use this to decide which sections below genuinely apply, rather than including everything by default.
-- **Products & market learning** — the portfolio is large, so give every hire a breadth pass and only some hires real depth. Load [core:aesthetics](../../../core/skills/aesthetics/SKILL.md) for an Aesthetics-facing role or [core:vision](../../../core/skills/vision/SKILL.md) for a Vision-facing role — full business-unit portfolio, technology platforms, and condition/treatment categories, regardless of seniority — that's the breadth layer everyone gets. Then go deep on whichever `core:product-*` skill(s) the role is actually tied to (most Vision products besides OptiLIFT/OptiLIGHT don't have a dedicated product skill yet — `core:vision` is the fallback there, not an invented one).
+- **Products & market learning** — the portfolio is large, so give every hire a breadth pass and only some hires real depth. The Department input (Aesthetics or Vision) settles which business unit's [core:aesthetics](../../../core/skills/aesthetics/SKILL.md) or [core:vision](../../../core/skills/vision/SKILL.md) content to pull — full business-unit portfolio, technology platforms, and condition/treatment categories, regardless of seniority, is the breadth layer everyone gets. Then go deep on whichever `core:product-*` skill(s) the role is actually tied to (most Vision products besides OptiLIFT/OptiLIGHT don't have a dedicated product skill yet — `core:vision` is the fallback there, not an invented one).
 - **Sales exposure** — every hire gets a video call with a local sales rep. Only roles with broader remit (director+, or a role that shapes sales-facing programs) should also meet Regional Sales Managers or the VP of Sales — don't add senior sales leadership to every plan by default.
 - **Vendor introductions** — only for roles that would plausibly own or touch a vendor relationship (events, PR, advertising, AV). Skip entirely for roles with no vendor-facing scope rather than including it as a formality.
 
 ## Output
 
-Plain markdown text only — never generate a `.docx` or a design artifact for this. If the user wants a polished/visual version, tell them to take the plain-text output into Claude Design themselves; that's a separate, deliberate step, not something this skill does.
+**A folder, not a single document** — never plain text, never one combined file, never a design artifact. The folder contains exactly four `.docx` files:
+
+1. `Onboarding Plan.docx`
+2. `Product Portfolio.docx`
+3. `Competitors.docx`
+4. `Customer.docx`
+
+Name the folder `<New Hire Name> Onboarding/`. Files 2-4 are not written from scratch — they're each generated from the matching business-unit skill file for the Department given in Input, so the same source of truth used everywhere else in this repo is what the new hire reads too:
+
+| File                     | Source (Aesthetics)                                                                          | Source (Vision)                                                                      |
+| ------------------------ | -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| `Product Portfolio.docx` | [core:aesthetics/product-portfolio.md](../../../core/skills/aesthetics/product-portfolio.md) | [core:vision/product-portfolio.md](../../../core/skills/vision/product-portfolio.md) |
+| `Competitors.docx`       | [core:aesthetics/competitors.md](../../../core/skills/aesthetics/competitors.md)             | [core:vision/competitors.md](../../../core/skills/vision/competitors.md)             |
+| `Customer.docx`          | [core:aesthetics/customers.md](../../../core/skills/aesthetics/customers.md)                 | [core:vision/customers.md](../../../core/skills/vision/customers.md)                 |
+
+Convert the source file's content faithfully — this is the same content that already lives in the business-unit skill, reformatted for a standalone read, not a rewrite or a summary. Carry over its caveats as-is (e.g. Vision's `competitors.md` says outright that it's an unresearched placeholder — that caveat must survive into `Competitors.docx`, not get smoothed away in the conversion). If the source file has since changed and this skill's own copy of its guidance is stale, trust the live file over anything described here.
+
+### File 1: Onboarding Plan.docx
 
 Structure exactly as follows. Omit a bullet only when **Role shapes the plan** says it genuinely doesn't apply — don't pad with filler to keep every section present.
 
-### 30-60-90 Onboarding Plan
+**30-60-90 Onboarding Plan**
 
-- Open with new hire name, role, team, start date, manager.
+- Open with new hire name, department, role, start date, manager.
 - Note the next New Hire Training date if the user provided one (or flag it TBD).
-- Products & market orientation appropriate to their department (see **Role shapes the plan**).
 - By day 30: platform access needed (HubSpot / Salesforce / Smartsheet / Asana / SharePoint / OneDrive / DropBox / other), as confirmed with the user — don't assume access needs.
 - Overview of sprint planning & reporting cadence.
 - Overview of project management and tracking (tools/process the team actually uses).
 - Lay this out across the 30/60/90 phases: orientation and access concentrated early, ramping to real ownership by day 90.
-- Point to the **Market, category & competitive learning** module below and its day-90 capstone as part of the plan, not a separate track.
 
-### Market, category & competitive learning
+**Market, category & competitive learning** — a phased reading-and-application plan that points at the other three files rather than repeating their content. Each phase ends with the new hire producing something, not just having read something — see **Feedback loop** immediately below for what that means in practice.
 
-A dedicated learning track, phased across the 90 days, that builds toward the new hire producing their own marketing plan or point of view — not a pile of reading assigned and never followed up on. Don't invent market data or competitor specifics that aren't sourced from something real (a Lumenis skill, the company site, or research the new hire does and reports back) — this module is where fabricated "facts" would be most damaging.
+- **Days 1-30 — portfolio and category orientation:** read `Product Portfolio.docx` and `Customer.docx` in full. Cover the energy-based device (EBD) category itself — what it is, how it's regulated, how it's sold — as the umbrella category Lumenis competes in. If the new hire brought outside expertise (from Input), have them note early where it maps or doesn't map to this category — that comparison is itself useful onboarding output, not busywork. Phase closes with the day-30 report (see **Feedback loop**).
+- **Days 31-60 — competitive landscape:** read `Competitors.docx`. Have the new hire produce a short SWOT per Tier-1 (or otherwise role-relevant) competitor — this is their work product to build (with guidance/review from their manager), not something handed to them pre-filled, since building it is how the learning actually happens. Don't invent one from a one-paragraph "everyone else" mental model where the source file only gives that much — those are intentionally shallow, not SWOT-ready. Phase closes with the day-60 report, which should already start reading as a point of view, not just a summary of what was learned.
+- **Days 61-90 — synthesis and capstone:** the new hire drafts a first marketing plan that (1) takes an explicit position on how Lumenis should shape the market and respond to it as consumer behavior and the competitive/category landscape move — not a static snapshot of where things stand today — and (2) visibly applies the expertise they came in with (see Input): name specifically how their prior background shapes this plan (a fresh angle, a channel they already know, a gap they're positioned to spot) rather than leaving "apply their skillset" implicit. This plan _is_ the day-90 report — set a review checkpoint with the manager for it before day 90 closes out.
 
-- **Days 1-30 — portfolio and category orientation:**
-  - Full business-unit product portfolio and technology platforms — `core:aesthetics` or `core:vision` as applies — as breadth, regardless of role.
-  - The energy-based device (EBD) category itself — what it is, how it's regulated, how it's sold — as the umbrella category Lumenis competes in.
-  - The customer/channel landscape this role will actually sell or market into: medspas, dermatology practices, and plastic surgery practices as distinct segments — how they differ in buying behavior, decision-maker, and what they value, not treated as one undifferentiated "provider" audience.
-  - If the new hire brought outside expertise (from Input), have them note early where it maps or doesn't map to this category — that comparison is itself useful onboarding output, not busywork.
-- **Days 31-60 — competitive landscape:**
-  - Start from [core:aesthetics/competitors.md](../../../core/skills/aesthetics/competitors.md) or [core:vision/competitors.md](../../../core/skills/vision/competitors.md), whichever applies — the business-unit-level competitive picture, including which competitors actually matter right now (Tier-1, deep) vs. a lighter pass on the rest. Vision's is currently a placeholder that says so rather than inventing a tier list — treat that gap itself as a legitimate research assignment, not a blocker.
-  - Layer in product-level detail from the relevant `core:product-*` skill's **Competitors** section, where one exists (e.g. FoLix vs. LaserMD/Alma TED/Nutrafol, triLift vs. Morpheus8/Genius/Secret/Emface).
-  - Have the new hire produce a short SWOT per Tier-1 (or otherwise role-relevant) competitor — this is their work product to build (with guidance/review from their manager), not something handed to them pre-filled, since building it is how the learning actually happens. Don't invent one from the one-paragraph "everyone else" mental models — those are intentionally shallow, not SWOT-ready.
-- **Days 61-90 — synthesis and capstone:**
-  - The new hire drafts a first marketing plan or point of view for their area, explicitly informed by the portfolio/category orientation, the competitor SWOTs, and — critically — the expertise they came in with (see Input). Name specifically how their prior background should shape this (a fresh angle, a channel they already know, a gap they're positioned to spot) rather than leaving "apply their skillset" implicit.
-  - Set a review checkpoint with the manager for this deliverable before day 90 closes out.
+**Feedback loop — interim reports**
 
-### Meetings
+This track is not read-only. At the end of each phase above, the new hire delivers a short written report to their manager — what they learned, what surprised them, and (from day 60 onward) an early point of view starting to form — so progress is visible throughout the 90 days rather than only checked at a final deliverable. Default cadence is end-of-phase (day 30, day 60, day 90); the day-90 "report" is the capstone marketing plan itself, not a separate document on top of it. If the user specifies a different cadence (e.g. weekly) or format (e.g. a live readout instead of written), use that instead of the default — don't assume everyone wants the same rhythm.
+
+**Resume-informed tasks** — only when a resume was supplied (see Input):
+
+Add a short list of specific, real tasks or stretch assignments the new hire could plausibly take on during the 90 days, each tied to a concrete line from the resume — a named tool ("ran HubSpot workflows at [prior company]" → own a workflow audit by day 45), a channel or campaign type they've actually run, an industry/competitor adjacency, or a quantified result they've delivered before. This is the most concrete form of "applying their skillset" from **Key outcome** above, so treat it as load-bearing, not a nice-to-have list.
+
+- Every task must trace to something actually in the resume — don't infer a capability from a job title alone (a "Marketing Manager" title doesn't itself imply SEO experience unless the resume says so), and don't pad the list to look thorough.
+- Sequence by confidence, not ambition: something they've clearly done before can start earlier (even inside the first 30 days) and doesn't need heavy oversight; something adjacent to their experience but not identical belongs later, paired with a check-in.
+- Keep the list short (2-5 tasks) and specific enough that the new hire and their manager could each independently point to the resume line behind it. A vague task ("bring fresh perspective to campaigns") isn't resume-informed — it's filler wearing this section's name.
+- If no resume was supplied, omit this subsection entirely rather than writing a thin version from the verbal "what they bring" answer — that input still feeds the day-90 capstone framing, just not this specific task list.
+
+**Meetings**
 
 - List the recurring meetings this hire should join.
 - Always include the sales-marketing meeting, with the cadence/timing the user provided.
 
-### Planned Introductions
+**Planned Introductions**
 
 - Cap at **4 introductions per week** across the full 90-day period — spread across the plan, not front-loaded into week one.
 - **Vendors** (PR, Marketing Agency, Event Production, AV, Social) — only where role-relevant per **Role shapes the plan**.
@@ -86,7 +104,7 @@ A dedicated learning track, phased across the 90 days, that builds toward the ne
 - **Business Unit** — Product Manager / BU personnel, per what the user specified.
 - **Marketing** — calls with teammates to learn their function and the systems they use day to day.
 
-### Key Contacts
+**Key Contacts**
 
 | Person      | Role      | For What                            |
 | ----------- | --------- | ----------------------------------- |
@@ -97,7 +115,15 @@ A dedicated learning track, phased across the 90 days, that builds toward the ne
 
 Fill in names where the user gave them; leave the bracketed placeholder where they didn't, rather than inventing a name.
 
+### Generating the four `.docx` files
+
+Write each file's content as clean Markdown first, then convert:
+
+1. If `pandoc` is available (`which pandoc`), run `pandoc <file>.md -o "<file>.docx"` for each of the four.
+2. Otherwise, use `python-docx` (`pip install python-docx` if not already installed) with a short script that maps headers to Word heading styles, tables to real Word tables, and bullets to Word list items for each file — don't hand back a `.docx` that's just a plain-text dump with no real formatting, and don't collapse the tables in `Product Portfolio.docx`/`Competitors.docx` into plain paragraphs.
+3. Confirm all four files were created inside the named folder and tell the user its path — don't just claim success.
+
 ## Notes
 
-- If role, team, or manager is missing, ask before drafting — the plan is genuinely different per role, and guessing produces a plan that has to be redone rather than lightly edited.
-- Editing an existing plan: treat what's already in it (dates, names, decisions already made) as source of truth. Make the requested change; don't regenerate the whole plan from scratch.
+- If department, role, or manager is missing, ask before drafting — the plan (and three of the four files) is genuinely different per department/role, and guessing produces a folder that has to be redone rather than lightly edited.
+- Editing an existing plan: treat what's already in it (dates, names, decisions already made) as source of truth. Make the requested change to the relevant file(s); don't regenerate all four from scratch. If only `Onboarding Plan.docx` needs a change, leave the other three untouched.
