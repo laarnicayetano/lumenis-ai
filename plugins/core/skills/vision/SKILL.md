@@ -23,3 +23,5 @@ portfolio, and condition categories.
 - For competitive landscape, see [competitors.md](competitors.md) — this one hasn't
   had a real research pass yet, unlike Aesthetics' version; it says so rather
   than pretending otherwise.
+- For the portfolio learned by category rather than by SKU, see
+  [product-portfolio.md](product-portfolio.md).
