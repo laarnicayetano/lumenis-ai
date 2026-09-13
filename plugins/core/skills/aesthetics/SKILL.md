@@ -15,3 +15,4 @@ portfolio, and treatment categories.
 - Ground technology/product claims in `aesthetics.md`; don't invent specs.
 - Pair with `brand-context` for company-wide positioning and voice.
 - For tone/depth guidance tailored to who you're writing for (KOL, physician, practice owner, patient), see [audience-archetypes/aesthetics-archetypes.md](../audience-archetypes/aesthetics-archetypes.md).
+- For competitive landscape — which competitors actually matter and why — see [competitors.md](competitors.md).

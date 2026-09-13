@@ -20,3 +20,6 @@ portfolio, and condition categories.
 - For tone/depth guidance tailored to who you're writing for (KOL,
   ophthalmologist, optometrist, practice owner, patient), see
   [audience-archetypes/vision-archetypes.md](../audience-archetypes/vision-archetypes.md).
+- For competitive landscape, see [competitors.md](competitors.md) — this one hasn't
+  had a real research pass yet, unlike Aesthetics' version; it says so rather
+  than pretending otherwise.
