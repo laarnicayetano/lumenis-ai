@@ -5,7 +5,7 @@ description: Create or edit a 30-60-90 day onboarding plan for a new marketing h
 
 # Onboarding plan writer
 
-Builds a 30-60-90 day onboarding plan for a new hire joining the marketing org. The plan is genuinely different by role — a field-facing product marketer and an internal marketing-ops hire don't get the same introductions or learning path — so role drives most of the content, not just the header.
+Builds a 30-60-90 day onboarding plan for a new hire joining the marketing org. The plan is genuinely different by role — a field-facing product marketer and an internal marketing-ops hire don't get the same introductions or learning path — so role drives most of the content, not just the header. The plan is for the new hire and not for a person onboarding them. We should not be mentioning their resume or her background.
 
 **Key outcome — the point of the plan is not just orientation.** By day 90 the new hire should be sharp on the portfolio, the category, and the competitive landscape, and should have turned that into a robust marketing plan that does two specific things: (1) takes a point of view on how Lumenis should move as the market and consumer behavior move — not just a description of where things stand today — and (2) visibly applies the expertise _they themselves_ brought to Lumenis, named explicitly rather than left implicit. Every learning module below builds toward that outcome, and none of it is read-only — see **Feedback loop** below. Reading without reporting back doesn't count as progress.
 
@@ -60,44 +60,58 @@ Convert the source file's content faithfully — this is the same content that a
 
 ### File 1: Onboarding Plan.docx
 
-Structure exactly as follows. Omit a bullet only when **Role shapes the plan** says it genuinely doesn't apply — don't pad with filler to keep every section present.
+Written **to the new hire, in her own voice** — this is a document she owns and reports from, not a file written about her. Address her directly ("you," "your") throughout the phase write-ups, the report prompts, and the tasks/meetings/introductions sections — never in the third person ("she will," "the new hire should"). The only exception is the header block immediately below, which is reference data, not narrative.
+
+Structure exactly as follows, organized around the three onboarding phases — there is one integrated 30/60/90 track, not a separate "operational onboarding" section and "learning" section running in parallel. Each phase mixes the operational tasks (access, cadence, tools) and the market/category/competitive learning due in that same window. Omit a bullet only when **Role shapes the plan** says it genuinely doesn't apply — don't pad with filler to keep every section present.
 
 **30-60-90 Onboarding Plan**
 
 - Open with new hire name, department, role, start date, manager.
 - Note the next New Hire Training date if the user provided one (or flag it TBD).
-- By day 30: platform access needed (HubSpot / Salesforce / Smartsheet / Asana / SharePoint / OneDrive / DropBox / other).
+
+**Days 1-30**
+
+- Platform access needed (HubSpot / Salesforce / Smartsheet / Asana / SharePoint / OneDrive / DropBox / other).
 - Overview of sprint planning & reporting cadence.
 - Overview of project management and tracking (tools/process the team actually uses).
-- Lay this out across the 30/60/90 phases: orientation and access concentrated early, ramping to real ownership by day 90.
+- Read `Product Portfolio.docx` and `Customer.docx` in full. Cover the energy-based device (EBD) category itself — what it is, how it's regulated, how it's sold — as the umbrella category Lumenis competes in.
+- If she brought outside expertise (from Input), note early where it maps or doesn't map to this category — that comparison is itself useful onboarding output, not busywork.
+- Closes with the day-30 report (see **Feedback loop**).
 
-**Market, category & competitive learning** — a phased reading-and-application plan that points at the other three files rather than repeating their content. Each phase ends with the new hire producing something, not just having read something — see **Feedback loop** immediately below for what that means in practice.
+**Days 31-60**
 
-- **Days 1-30 — portfolio and category orientation:** read `Product Portfolio.docx` and `Customer.docx` in full. Cover the energy-based device (EBD) category itself — what it is, how it's regulated, how it's sold — as the umbrella category Lumenis competes in. If the new hire brought outside expertise (from Input), have them note early where it maps or doesn't map to this category — that comparison is itself useful onboarding output, not busywork. Phase closes with the day-30 report (see **Feedback loop**).
-- **Days 31-60 — competitive landscape:** read `Competitors.docx`. Have the new hire produce a short SWOT per Tier-1 (or otherwise role-relevant) competitor — this is their work product to build (with guidance/review from their manager), not something handed to them pre-filled, since building it is how the learning actually happens. Don't invent one from a one-paragraph "everyone else" mental model where the source file only gives that much — those are intentionally shallow, not SWOT-ready. Phase closes with the day-60 report, which should already start reading as a point of view, not just a summary of what was learned.
-- **Days 61-90 — synthesis and capstone:** the new hire drafts a first marketing plan that (1) takes an explicit position on how Lumenis should shape the market and respond to it as consumer behavior and the competitive/category landscape move — not a static snapshot of where things stand today — and (2) visibly applies the expertise they came in with (see Input): name specifically how their prior background shapes this plan (a fresh angle, a channel they already know, a gap they're positioned to spot) rather than leaving "apply their skillset" implicit. This plan _is_ the day-90 report — set a review checkpoint with the manager for it before day 90 closes out.
+- Read `Competitors.docx`.
+- Produce a short SWOT per Tier-1 (or otherwise role-relevant) competitor — this is work you build yourself (with guidance/review from your manager), not something handed to you pre-filled, since building it is how the learning actually happens. Don't invent one from a one-paragraph "everyone else" mental model where the source file only gives that much — those are intentionally shallow, not SWOT-ready.
+- Closes with the day-60 report, which should already read as a point of view, not just a summary of what was learned.
+
+**Days 61-90**
+
+- Draft a first marketing plan that (1) takes an explicit position on how Lumenis should shape the market and respond to it as consumer behavior and the competitive/category landscape move — not a static snapshot of where things stand today — and (2) visibly applies the expertise you came in with (see Input): name specifically how your prior background shapes this plan (a fresh angle, a channel you already know, a gap you're positioned to spot) rather than leaving "apply your skillset" implicit.
+- This plan _is_ the day-90 report — set a review checkpoint with your manager for it before day 90 closes out.
 
 **Feedback loop — interim reports**
 
-This track is not read-only. At the end of each phase above, the new hire delivers a short written report to their manager — what they learned, what surprised them, and (from day 60 onward) an early point of view starting to form — so progress is visible throughout the 90 days rather than only checked at a final deliverable. Default cadence is end-of-phase (day 30, day 60, day 90); the day-90 "report" is the capstone marketing plan itself, not a separate document on top of it. If the user specifies a different cadence (e.g. weekly) or format (e.g. a live readout instead of written), use that instead of the default — don't assume everyone wants the same rhythm.
+This track is not read-only. At the end of each phase above, deliver a short written report to your manager — what you learned, what surprised you most, and (from day 60 onward) an early point of view starting to form — so your progress is visible throughout the 90 days rather than only checked at a final deliverable. Default cadence is end-of-phase (day 30, day 60, day 90); the day-90 "report" is the capstone marketing plan itself, not a separate document on top of it. If the user specifies a different cadence (e.g. weekly) or format (e.g. a live readout instead of written), use that instead of the default — don't assume everyone wants the same rhythm.
 
-**Resume-informed tasks** — only when a resume was supplied (see Input):
+**Tasks** — only when a resume was supplied (see Input):
 
-Add a short list of specific, real tasks or stretch assignments the new hire could plausibly take on during the 90 days, each tied to a concrete line from the resume — a named tool ("ran HubSpot workflows at [prior company]" → own a workflow audit by day 45), a channel or campaign type they've actually run, an industry/competitor adjacency, or a quantified result they've delivered before. This is the most concrete form of "applying their skillset" from **Key outcome** above, so treat it as load-bearing, not a nice-to-have list.
+A short list of specific, real tasks or stretch assignments you could plausibly take on during the 90 days, each tied to a concrete line from your resume — a named tool ("ran HubSpot workflows at [prior company]" → own a workflow audit by day 45), a channel or campaign type you've actually run, an industry/competitor adjacency, or a quantified result you've delivered before. This is the most concrete form of "applying your skillset" from **Key outcome** above, so treat it as load-bearing, not a nice-to-have list.
 
+- Do not mention the resume in any capacity.
 - Every task must trace to something actually in the resume — don't infer a capability from a job title alone (a "Marketing Manager" title doesn't itself imply SEO experience unless the resume says so), and don't pad the list to look thorough.
-- Sequence by confidence, not ambition: something they've clearly done before can start earlier (even inside the first 30 days) and doesn't need heavy oversight; something adjacent to their experience but not identical belongs later, paired with a check-in.
-- Keep the list short (2-5 tasks) and specific enough that the new hire and their manager could each independently point to the resume line behind it. A vague task ("bring fresh perspective to campaigns") isn't resume-informed — it's filler wearing this section's name.
-- If no resume was supplied, omit this subsection entirely rather than writing a thin version from the verbal "what they bring" answer — that input still feeds the day-90 capstone framing, just not this specific task list.
+- Sequence by confidence, not ambition: something you've clearly done before can start earlier (even inside the first 30 days) and doesn't need heavy oversight; something adjacent to your experience but not identical belongs later, paired with a check-in.
+- Keep the list short (2-5 tasks) and specific enough that you and your manager could each independently point to the resume line behind it. A vague task ("bring fresh perspective to campaigns") isn't resume-informed — it's filler wearing this section's name.
+- If no resume was supplied, omit this subsection entirely rather than writing a thin version from the verbal "what she brings" answer — that input still feeds the day-90 capstone framing, just not this specific task list.
 
 **Meetings**
 
-- List the recurring meetings this hire should join.
+- List the recurring meetings you should join.
 - Always include the sales-marketing meeting, with the cadence/timing the user provided.
 
 **Planned Introductions**
 
-- Cap at **4 introductions per week** across the full 90-day period — spread across the plan, not front-loaded into week one.
+- Cap at **4 introductions per week** across the full 90-day period (roughly 13 weeks from the start date) — spread across the plan, not front-loaded into week one.
+- Lay this out as a real calendar, not a phase label: compute Week 1 as the calendar week containing the start date given in Input, number the weeks sequentially through week ~13, and assign each introduction to a specific week (a table works well — Week | Week of [date] | Introduction | Category). Distribute the categories below across that span rather than clustering one category into a single week.
 - **Vendors** (PR, Marketing Agency, Event Production, AV, Social) — only where role-relevant per **Role shapes the plan**.
 - **Sales** — video call with a local sales rep for every hire; Regional Sales Manager / VP of Sales only where role-relevant. Schedule a ride-along with a local sales rep sometime within the 90-day window.
 - **Business Unit** — Product Manager / BU personnel, per what the user specified.
