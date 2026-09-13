@@ -1,13 +1,13 @@
 # Lumenis AI
 
-Shared Lumenis skills, organized as a plugin marketplace.
+Skills for me organized as a plugin marketplace.
 
 ## Plugins
 
 | Plugin      | Install                | Description                                                                                |
 | ----------- | ---------------------- | ------------------------------------------------------------------------------------------ |
 | `core`      | `core@lumenis-ai`      | Brand context, global design system, per-product context/design skills. **Install first.** |
-| `marketing` | `marketing@lumenis-ai` | Positioning, image/HubSpot workflows.                                                       |
+| `marketing` | `marketing@lumenis-ai` | Positioning, image/HubSpot workflows.                                                      |
 
 ## Installing
 
