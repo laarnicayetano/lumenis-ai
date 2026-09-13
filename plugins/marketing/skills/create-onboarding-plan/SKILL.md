@@ -22,7 +22,6 @@ Always required — ask if not given:
 Ask the user directly rather than guessing — these are decisions only they can make:
 
 - **Next New Hire Training date**, so it can be placed in the plan. If they don't know it, note it in the plan as "TBD — confirm with Bill" rather than inventing a date.
-- **Platform access** (HubSpot, Salesforce, Smartsheet, Asana, SharePoint, OneDrive, DropBox, anything else) the new hire should have by day 30 — ask which ones apply to this role.
 - **Meeting** — the new hire needs to know what meetings they will be apart of; ask what meetings they need to be a part of and what is the cadence of the meetings.
 - **Product Manager / BU personnel** worth introducing this new hire to — ask which ones make sense, don't guess from the title alone.
 - **What the new hire already brings** — prior industry, role, or domain expertise the manager is hiring for. This is what the learning modules and the day-90 marketing plan should explicitly build on (see **Market, category & competitive learning**) — without it, the plan can only teach Lumenis, not connect Lumenis to what this person already knows.
@@ -67,7 +66,7 @@ Structure exactly as follows. Omit a bullet only when **Role shapes the plan** s
 
 - Open with new hire name, department, role, start date, manager.
 - Note the next New Hire Training date if the user provided one (or flag it TBD).
-- By day 30: platform access needed (HubSpot / Salesforce / Smartsheet / Asana / SharePoint / OneDrive / DropBox / other), as confirmed with the user — don't assume access needs.
+- By day 30: platform access needed (HubSpot / Salesforce / Smartsheet / Asana / SharePoint / OneDrive / DropBox / other).
 - Overview of sprint planning & reporting cadence.
 - Overview of project management and tracking (tools/process the team actually uses).
 - Lay this out across the 30/60/90 phases: orientation and access concentrated early, ramping to real ownership by day 90.
