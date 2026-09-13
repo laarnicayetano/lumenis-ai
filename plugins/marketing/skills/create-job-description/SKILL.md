@@ -23,7 +23,7 @@ Don't ask about market (always US) or core tech stack (always HubSpot + Salesfor
 ## Context to pull before drafting
 
 - Always ground company framing (mission, tone, positioning) in [core:brand-context](../../../core/skills/brand-context/SKILL.md).
-- If the role sits in or supports **Aesthetics**, load [core:aesthetics](../../../core/skills/aesthetics/SKILL.md) for business-unit context. There's no equivalent business-unit-level skill for Vision yet — for a Vision role, rely on brand-context plus the specific product skill if one applies, and don't invent Vision-specific positioning that isn't there.
+- If the role sits in or supports **Aesthetics**, load [core:aesthetics](../../../core/skills/aesthetics/SKILL.md); for **Vision**, load [core:vision](../../../core/skills/vision/SKILL.md). Either gives business-unit-level portfolio and positioning context — layer the specific `core:product-*` skill on top where the role is tied to one product.
 - [core:audience-archetypes](../../../core/skills/audience-archetypes/SKILL.md) is occasionally useful for roles that engage a named external audience directly (e.g. a role working with KOLs or practice owners) — load it only when describing that interaction accurately matters, not as a default.
 
 ## Defaults (the company context, unless told otherwise)
