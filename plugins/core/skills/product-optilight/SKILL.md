@@ -33,6 +33,10 @@ Reference: https://lumenis.com/vision/products/optilight/
 ## Competitors
 <!-- Not yet provided. -->
 
+## Claims reference
+
+[claims-reference.md](claims-reference.md) — a sourced audit of specific clinical/regulatory/epidemiological claims and stats used in OptiLIGHT marketing materials (deck + trifold), with citations and a per-claim review status. Most rows are marked `needs review`, including two likely citation errors (see the file's high-priority flags) — check status and qualifications there before citing an exact figure externally; `confirmed` rows still don't substitute for regulatory/legal review of new copy.
+
 ## How to use this
 - Keep messaging consistent with the marketing positioning pillars.
 - If it's unclear which product a request is about, ask first.
