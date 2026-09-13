@@ -1,11 +1,11 @@
 ---
 name: create-onboarding-plan
-description: Create or edit a 30-60-90 day onboarding plan for a new marketing hire, output as a folder of four .docx files (Onboarding Plan, Competitors, Product Portfolio, Customer) — never plain text or an artifact. Requires the new hire's department (Aesthetics or Vision) up front, since three of the four files are pulled from that business unit's own skill content. Builds toward the new hire producing their own first marketing plan by day 90. Use when the user wants a new-hire onboarding plan, 30-60-90 plan, or wants to edit an existing one.
+description: Create or edit a 30-60-90 day onboarding plan for a new marketing hire, output as a folder of five .docx files (Onboarding Plan, Competitors, Product Portfolio, Customer, and a blank Weekly Status Report template) — never plain text or an artifact. Requires the new hire's department (Aesthetics or Vision) up front, since three of the five files are pulled from that business unit's own skill content. Builds toward the new hire producing their own first marketing plan by day 90, with weekly status reports along the way. Use when the user wants a new-hire onboarding plan, 30-60-90 plan, or wants to edit an existing one.
 ---
 
 # Onboarding plan writer
 
-Builds a 30-60-90 day onboarding plan for a new hire joining the marketing org. The plan is genuinely different by role — a field-facing product marketer and an internal marketing-ops hire don't get the same introductions or learning path — so role drives most of the content, not just the header.
+Builds a 30-60-90 day onboarding plan for a new hire joining the marketing org. The plan is genuinely different by role — a field-facing product marketer and an internal marketing-ops hire don't get the same introductions or learning path — so role drives most of the content, not just the header. The plan is for the new hire and not for a person onboarding them. We should not be mentioning their resume or background.
 
 **Key outcome — the point of the plan is not just orientation.** By day 90 the new hire should be sharp on the portfolio, the category, and the competitive landscape, and should have turned that into a robust marketing plan that does two specific things: (1) takes a point of view on how Lumenis should move as the market and consumer behavior move — not just a description of where things stand today — and (2) visibly applies the expertise _they themselves_ brought to Lumenis, named explicitly rather than left implicit. Every learning module below builds toward that outcome, and none of it is read-only — see **Feedback loop** below. Reading without reporting back doesn't count as progress.
 
@@ -14,7 +14,7 @@ Builds a 30-60-90 day onboarding plan for a new hire joining the marketing org. 
 Always required — ask if not given:
 
 - **New hire name**
-- **Department — Aesthetics or Vision.** Required before drafting, not inferred from the role title: three of the four output files (Competitors, Product Portfolio, Customer) are pulled directly from that business unit's own skill content, so the skill cannot proceed without knowing which one applies. If the role genuinely spans both or sits outside either (e.g. a corporate/shared-services role), say so rather than guessing — don't default to one.
+- **Department — Aesthetics or Vision.** Required before drafting, not inferred from the role title: three of the five output files (Competitors, Product Portfolio, Customer) are pulled directly from that business unit's own skill content, so the skill cannot proceed without knowing which one applies. If the role genuinely spans both or sits outside either (e.g. a corporate/shared-services role), say so rather than guessing — don't default to one.
 - **Role** — the title. This drives almost everything else; see **Role shapes the plan** below.
 - **Start date**
 - **Manager**
@@ -41,12 +41,13 @@ Nice to have — use if the user provides them, otherwise leave a clearly-marked
 
 ## Output
 
-**A folder, not a single document** — never plain text, never one combined file, never a design artifact. The folder contains exactly four `.docx` files:
+**A folder, not a single document** — never plain text, never one combined file, never a design artifact. The folder contains exactly five `.docx` files:
 
 1. `Onboarding Plan.docx`
 2. `Product Portfolio.docx`
 3. `Competitors.docx`
 4. `Customer.docx`
+5. `Weekly Status Report Template.docx`
 
 Name the folder `<New Hire Name> Onboarding/`. Files 2-4 are not written from scratch — they're each generated from the matching business-unit skill file for the Department given in Input, so the same source of truth used everywhere else in this repo is what the new hire reads too:
 
@@ -58,46 +59,69 @@ Name the folder `<New Hire Name> Onboarding/`. Files 2-4 are not written from sc
 
 Convert the source file's content faithfully — this is the same content that already lives in the business-unit skill, reformatted for a standalone read, not a rewrite or a summary. Carry over its caveats as-is (e.g. Vision's `competitors.md` says outright that it's an unresearched placeholder — that caveat must survive into `Competitors.docx`, not get smoothed away in the conversion). If the source file has since changed and this skill's own copy of its guidance is stale, trust the live file over anything described here.
 
+`Weekly Status Report Template.docx` is different from the other three — it isn't department-specific and isn't generated from a business-unit skill. It's converted straight from this skill's own [templates/weekly-status-report-template.md](templates/weekly-status-report-template.md), the same for every new hire regardless of department.
+
 ### File 1: Onboarding Plan.docx
 
-Structure exactly as follows. Omit a bullet only when **Role shapes the plan** says it genuinely doesn't apply — don't pad with filler to keep every section present.
+Written **to the new hire, in their own voice** — this is a document they own and report from, not a file written about them. Address them directly ("you," "your") throughout the phase write-ups, the report prompts, and the tasks/meetings/introductions sections — never in the third person ("they will," "the new hire should"). The only exception is the header block immediately below, which is reference data, not narrative.
+
+Structure exactly as follows, organized around the three onboarding phases — there is one integrated 30/60/90 track, with both "operational onboarding" section and "learning" sections. Each phase mixes the operational tasks (access, cadence, tools) and the market/category/competitive learning due in that same window. Omit a bullet only when **Role shapes the plan** says it genuinely doesn't apply — don't pad with filler to keep every section present.
 
 **30-60-90 Onboarding Plan**
 
 - Open with new hire name, department, role, start date, manager.
 - Note the next New Hire Training date if the user provided one (or flag it TBD).
-- By day 30: platform access needed (HubSpot / Salesforce / Smartsheet / Asana / SharePoint / OneDrive / DropBox / other).
+
+**Days 1-30**
+
+- Platform access needed (HubSpot / Salesforce / Smartsheet / Asana / SharePoint / OneDrive / DropBox / other).
 - Overview of sprint planning & reporting cadence.
 - Overview of project management and tracking (tools/process the team actually uses).
-- Lay this out across the 30/60/90 phases: orientation and access concentrated early, ramping to real ownership by day 90.
+- Read `Product Portfolio.docx` and `Customer.docx` in full. Cover the energy-based device (EBD) category itself — what it is, how it's regulated, how it's sold — as the umbrella category Lumenis competes in.
+- If there is outside expertise (from Input), note early where it maps or doesn't map to this category — that comparison is itself useful onboarding output, not busywork.
+- Closes with a day-30 checkpoint with your manager, on top of the weekly status reports you've already been sending (see **Feedback loop**).
 
-**Market, category & competitive learning** — a phased reading-and-application plan that points at the other three files rather than repeating their content. Each phase ends with the new hire producing something, not just having read something — see **Feedback loop** immediately below for what that means in practice.
+**Days 31-60**
 
-- **Days 1-30 — portfolio and category orientation:** read `Product Portfolio.docx` and `Customer.docx` in full. Cover the energy-based device (EBD) category itself — what it is, how it's regulated, how it's sold — as the umbrella category Lumenis competes in. If the new hire brought outside expertise (from Input), have them note early where it maps or doesn't map to this category — that comparison is itself useful onboarding output, not busywork. Phase closes with the day-30 report (see **Feedback loop**).
-- **Days 31-60 — competitive landscape:** read `Competitors.docx`. Have the new hire produce a short SWOT per Tier-1 (or otherwise role-relevant) competitor — this is their work product to build (with guidance/review from their manager), not something handed to them pre-filled, since building it is how the learning actually happens. Don't invent one from a one-paragraph "everyone else" mental model where the source file only gives that much — those are intentionally shallow, not SWOT-ready. Phase closes with the day-60 report, which should already start reading as a point of view, not just a summary of what was learned.
-- **Days 61-90 — synthesis and capstone:** the new hire drafts a first marketing plan that (1) takes an explicit position on how Lumenis should shape the market and respond to it as consumer behavior and the competitive/category landscape move — not a static snapshot of where things stand today — and (2) visibly applies the expertise they came in with (see Input): name specifically how their prior background shapes this plan (a fresh angle, a channel they already know, a gap they're positioned to spot) rather than leaving "apply their skillset" implicit. This plan _is_ the day-90 report — set a review checkpoint with the manager for it before day 90 closes out.
+- Read `Competitors.docx`.
+- Produce a short SWOT per Tier-1 (or otherwise role-relevant) competitor — this is work you build yourself (with guidance/review from your manager), not something handed to you pre-filled, since building it is how the learning actually happens. Don't invent one from a one-paragraph "everyone else" mental model where the source file only gives that much — those are intentionally shallow, not SWOT-ready.
+- Closes with a day-60 checkpoint where you walk your manager through the SWOTs — by now your weekly status reports should already show a point of view forming, not just a summary of what was learned.
 
-**Feedback loop — interim reports**
+**Days 61-90**
 
-This track is not read-only. At the end of each phase above, the new hire delivers a short written report to their manager — what they learned, what surprised them, and (from day 60 onward) an early point of view starting to form — so progress is visible throughout the 90 days rather than only checked at a final deliverable. Default cadence is end-of-phase (day 30, day 60, day 90); the day-90 "report" is the capstone marketing plan itself, not a separate document on top of it. If the user specifies a different cadence (e.g. weekly) or format (e.g. a live readout instead of written), use that instead of the default — don't assume everyone wants the same rhythm.
+- Draft a first marketing plan that (1) takes an explicit position on how Lumenis should shape the market and respond to it as consumer behavior and the competitive/category landscape move — not a static snapshot of where things stand today — and (2) visibly applies the expertise you came in with (see Input): name specifically how your prior background shapes this plan (a fresh angle, a channel you already know, a gap you're positioned to spot) rather than leaving "apply your skillset" implicit.
+- This plan _is_ the day-90 deliverable — set a review checkpoint with your manager for it before day 90 closes out.
 
-**Resume-informed tasks** — only when a resume was supplied (see Input):
+**Feedback loop — weekly status reports**
 
-Add a short list of specific, real tasks or stretch assignments the new hire could plausibly take on during the 90 days, each tied to a concrete line from the resume — a named tool ("ran HubSpot workflows at [prior company]" → own a workflow audit by day 45), a channel or campaign type they've actually run, an industry/competitor adjacency, or a quantified result they've delivered before. This is the most concrete form of "applying their skillset" from **Key outcome** above, so treat it as load-bearing, not a nice-to-have list.
+This track is not read-only. Every week, submit a Weekly Status Report to your manager using the template delivered as the fifth file in your onboarding folder (see **File 5: Weekly Status Report Template.docx** below) — so your progress is visible week over week, not just checked at day 30/60/90 or a final deliverable. The template has four sections:
 
+- **What You Did** — milestones or tasks finished this week, with quantifiable results where you have them, not just narrative updates.
+- **What's Blocked** — current hurdles or risks, plus the action or support you need from your manager or another stakeholder to clear them.
+- **What's Next** — your top 1-3 priorities for the coming week, plus any deadlines or deliverables to watch.
+- **What Surprised You** — something that didn't match your expectations this week, about the product, the market, the team, or the work itself. This is where the point-of-view-forming signal from **Key outcome** shows up in real time, week over week, instead of only every 30 days.
+
+The day-30, day-60, and day-90 checkpoints above still stand as their own bigger milestones — the weekly report is the connective tissue between them, not a replacement for them. If the user specifies a different cadence (e.g. biweekly) or format (e.g. a live readout instead of written), use that instead of weekly — don't assume everyone wants the same rhythm.
+
+**Tasks** — only when a resume was supplied (see Input):
+
+A short list of specific, real tasks or stretch assignments you could plausibly take on during the 90 days, each tied to a concrete line from your resume — a named tool ("ran HubSpot workflows at [prior company]" → own a workflow audit by day 45), a channel or campaign type you've actually run, an industry/competitor adjacency, or a quantified result you've delivered before. This is the most concrete form of "applying your skillset" from **Key outcome** above, so treat it as load-bearing, not a nice-to-have list.
+
+- Do not mention the resume in any capacity.
 - Every task must trace to something actually in the resume — don't infer a capability from a job title alone (a "Marketing Manager" title doesn't itself imply SEO experience unless the resume says so), and don't pad the list to look thorough.
-- Sequence by confidence, not ambition: something they've clearly done before can start earlier (even inside the first 30 days) and doesn't need heavy oversight; something adjacent to their experience but not identical belongs later, paired with a check-in.
-- Keep the list short (2-5 tasks) and specific enough that the new hire and their manager could each independently point to the resume line behind it. A vague task ("bring fresh perspective to campaigns") isn't resume-informed — it's filler wearing this section's name.
+- Sequence by confidence, not ambition: something you've clearly done before can start earlier (even inside the first 30 days) and doesn't need heavy oversight; something adjacent to your experience but not identical belongs later, paired with a check-in.
+- Keep the list short (2-5 tasks) and specific enough that you and your manager could each independently point to the resume line behind it. A vague task ("bring fresh perspective to campaigns") isn't resume-informed — it's filler wearing this section's name.
 - If no resume was supplied, omit this subsection entirely rather than writing a thin version from the verbal "what they bring" answer — that input still feeds the day-90 capstone framing, just not this specific task list.
 
 **Meetings**
 
-- List the recurring meetings this hire should join.
+- List the recurring meetings you should join.
 - Always include the sales-marketing meeting, with the cadence/timing the user provided.
 
 **Planned Introductions**
 
-- Cap at **4 introductions per week** across the full 90-day period — spread across the plan, not front-loaded into week one.
+- Cap at **4 introductions per week** across the full 90-day period (roughly 13 weeks from the start date) — spread across the plan, not front-loaded into week one.
+- Lay this out as a real calendar, not a phase label: compute Week 1 as the calendar week containing the start date given in Input, number the weeks sequentially through week ~13, and assign each introduction to a specific week (a table works well — Week | Week of [date] | Introduction | Category). Distribute the categories below across that span rather than clustering one category into a single week.
 - **Vendors** (PR, Marketing Agency, Event Production, AV, Social) — only where role-relevant per **Role shapes the plan**.
 - **Sales** — video call with a local sales rep for every hire; Regional Sales Manager / VP of Sales only where role-relevant. Schedule a ride-along with a local sales rep sometime within the 90-day window.
 - **Business Unit** — Product Manager / BU personnel, per what the user specified.
@@ -114,15 +138,19 @@ Add a short list of specific, real tasks or stretch assignments the new hire cou
 
 Fill in names where the user gave them; leave the bracketed placeholder where they didn't, rather than inventing a name.
 
-### Generating the four `.docx` files
+### File 5: Weekly Status Report Template.docx
+
+A blank, reusable template — not a filled-in report for any specific week. Convert [templates/weekly-status-report-template.md](templates/weekly-status-report-template.md) as-is, keeping every bracketed placeholder (`[Date]`, `[Completed task or shipped feature]`, etc.) intact, including the `[Name]` field in the header — leave it as a placeholder rather than filling in the new hire's actual name, since this one file gets reused (copied fresh, or its fields cleared) every week for all 90 days rather than regenerated per week. If a job description or the user's own team already has a preferred weekly-status format, ask before substituting it for this one rather than assuming this template is mandatory.
+
+### Generating the five `.docx` files
 
 Write each file's content as clean Markdown first, then convert:
 
-1. If `pandoc` is available (`which pandoc`), run `pandoc <file>.md -o "<file>.docx"` for each of the four.
+1. If `pandoc` is available (`which pandoc`), run `pandoc <file>.md -o "<file>.docx"` for each of the five.
 2. Otherwise, use `python-docx` (`pip install python-docx` if not already installed) with a short script that maps headers to Word heading styles, tables to real Word tables, and bullets to Word list items for each file — don't hand back a `.docx` that's just a plain-text dump with no real formatting, and don't collapse the tables in `Product Portfolio.docx`/`Competitors.docx` into plain paragraphs.
-3. Confirm all four files were created inside the named folder and tell the user its path — don't just claim success.
+3. Confirm all five files were created inside the named folder and tell the user its path — don't just claim success.
 
 ## Notes
 
-- If department, role, or manager is missing, ask before drafting — the plan (and three of the four files) is genuinely different per department/role, and guessing produces a folder that has to be redone rather than lightly edited.
-- Editing an existing plan: treat what's already in it (dates, names, decisions already made) as source of truth. Make the requested change to the relevant file(s); don't regenerate all four from scratch. If only `Onboarding Plan.docx` needs a change, leave the other three untouched.
+- If department, role, or manager is missing, ask before drafting — the plan (and three of the five files) is genuinely different per department/role, and guessing produces a folder that has to be redone rather than lightly edited.
+- Editing an existing plan: treat what's already in it (dates, names, decisions already made) as source of truth. Make the requested change to the relevant file(s); don't regenerate all five from scratch. If only `Onboarding Plan.docx` needs a change, leave the other four untouched.

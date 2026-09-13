@@ -29,7 +29,7 @@ SEARCH_DIRS = ["plugins", ".claude/skills"]
 OVERRIDE_RE = re.compile(r"<!--\s*confidential-ok\b", re.IGNORECASE)
 
 KEYWORDS = [
-    "upcoming", "future release", "not yet announced", "unannounced",
+    "future release", "not yet announced", "unannounced",
     "unreleased", "npi", "embargo", "embargoed", "pre-launch", "prelaunch",
     "under wraps", "internal only", "internal-only",
 ]
