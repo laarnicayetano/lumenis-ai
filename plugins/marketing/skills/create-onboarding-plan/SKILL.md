@@ -30,6 +30,7 @@ Ask the user directly rather than guessing — these are decisions only they can
 
 Nice to have — use if the user provides them, otherwise leave a clearly-marked placeholder rather than inventing a name:
 
+- **Resume** — if the user supplies one (pasted or a file), read it in full and use it in place of a verbal summary for "what the new hire already brings": it grounds **Resume-informed tasks** (see Output) in specific, real evidence — named employers, tools, campaign types, quantified results — rather than a general impression. If both a resume and a verbal description are given, the resume is the more precise source for specifics; the verbal description still matters for anything the resume wouldn't show (soft skills, why they were hired, team fit).
 - Local sales rep (for the video call and ride-along)
 - Specific vendor contacts (PR, Marketing Agency, Event Production, AV, Social)
 
@@ -81,6 +82,15 @@ Structure exactly as follows. Omit a bullet only when **Role shapes the plan** s
 **Feedback loop — interim reports**
 
 This track is not read-only. At the end of each phase above, the new hire delivers a short written report to their manager — what they learned, what surprised them, and (from day 60 onward) an early point of view starting to form — so progress is visible throughout the 90 days rather than only checked at a final deliverable. Default cadence is end-of-phase (day 30, day 60, day 90); the day-90 "report" is the capstone marketing plan itself, not a separate document on top of it. If the user specifies a different cadence (e.g. weekly) or format (e.g. a live readout instead of written), use that instead of the default — don't assume everyone wants the same rhythm.
+
+**Resume-informed tasks** — only when a resume was supplied (see Input):
+
+Add a short list of specific, real tasks or stretch assignments the new hire could plausibly take on during the 90 days, each tied to a concrete line from the resume — a named tool ("ran HubSpot workflows at [prior company]" → own a workflow audit by day 45), a channel or campaign type they've actually run, an industry/competitor adjacency, or a quantified result they've delivered before. This is the most concrete form of "applying their skillset" from **Key outcome** above, so treat it as load-bearing, not a nice-to-have list.
+
+- Every task must trace to something actually in the resume — don't infer a capability from a job title alone (a "Marketing Manager" title doesn't itself imply SEO experience unless the resume says so), and don't pad the list to look thorough.
+- Sequence by confidence, not ambition: something they've clearly done before can start earlier (even inside the first 30 days) and doesn't need heavy oversight; something adjacent to their experience but not identical belongs later, paired with a check-in.
+- Keep the list short (2-5 tasks) and specific enough that the new hire and their manager could each independently point to the resume line behind it. A vague task ("bring fresh perspective to campaigns") isn't resume-informed — it's filler wearing this section's name.
+- If no resume was supplied, omit this subsection entirely rather than writing a thin version from the verbal "what they bring" answer — that input still feeds the day-90 capstone framing, just not this specific task list.
 
 **Meetings**
 
