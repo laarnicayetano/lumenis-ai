@@ -62,7 +62,7 @@ Convert the source file's content faithfully — this is the same content that a
 
 Written **to the new hire, in her own voice** — this is a document she owns and reports from, not a file written about her. Address her directly ("you," "your") throughout the phase write-ups, the report prompts, and the tasks/meetings/introductions sections — never in the third person ("she will," "the new hire should"). The only exception is the header block immediately below, which is reference data, not narrative.
 
-Structure exactly as follows, organized around the three onboarding phases — there is one integrated 30/60/90 track, not a separate "operational onboarding" section and "learning" section running in parallel. Each phase mixes the operational tasks (access, cadence, tools) and the market/category/competitive learning due in that same window. Omit a bullet only when **Role shapes the plan** says it genuinely doesn't apply — don't pad with filler to keep every section present.
+Structure exactly as follows, organized around the three onboarding phases — there is one integrated 30/60/90 track, with both "operational onboarding" section and "learning" sections. Each phase mixes the operational tasks (access, cadence, tools) and the market/category/competitive learning due in that same window. Omit a bullet only when **Role shapes the plan** says it genuinely doesn't apply — don't pad with filler to keep every section present.
 
 **30-60-90 Onboarding Plan**
 
@@ -75,7 +75,7 @@ Structure exactly as follows, organized around the three onboarding phases — t
 - Overview of sprint planning & reporting cadence.
 - Overview of project management and tracking (tools/process the team actually uses).
 - Read `Product Portfolio.docx` and `Customer.docx` in full. Cover the energy-based device (EBD) category itself — what it is, how it's regulated, how it's sold — as the umbrella category Lumenis competes in.
-- If she brought outside expertise (from Input), note early where it maps or doesn't map to this category — that comparison is itself useful onboarding output, not busywork.
+- If there is outside expertise (from Input), note early where it maps or doesn't map to this category — that comparison is itself useful onboarding output, not busywork.
 - Closes with the day-30 report (see **Feedback loop**).
 
 **Days 31-60**
@@ -101,7 +101,7 @@ A short list of specific, real tasks or stretch assignments you could plausibly 
 - Every task must trace to something actually in the resume — don't infer a capability from a job title alone (a "Marketing Manager" title doesn't itself imply SEO experience unless the resume says so), and don't pad the list to look thorough.
 - Sequence by confidence, not ambition: something you've clearly done before can start earlier (even inside the first 30 days) and doesn't need heavy oversight; something adjacent to your experience but not identical belongs later, paired with a check-in.
 - Keep the list short (2-5 tasks) and specific enough that you and your manager could each independently point to the resume line behind it. A vague task ("bring fresh perspective to campaigns") isn't resume-informed — it's filler wearing this section's name.
-- If no resume was supplied, omit this subsection entirely rather than writing a thin version from the verbal "what she brings" answer — that input still feeds the day-90 capstone framing, just not this specific task list.
+- If no resume was supplied, omit this subsection entirely rather than writing a thin version from the verbal "what they brings" answer — that input still feeds the day-90 capstone framing, just not this specific task list.
 
 **Meetings**
 
