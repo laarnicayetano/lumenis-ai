@@ -98,7 +98,7 @@ PRIVATE KEY-----`, bearer tokens, `.env`-style `KEY=value` secrets)
    branch that's already up for review.
 
 9. **Report back in plain language**, e.g.:
-   > Format should be the following "Opened [PR{number}](url) from `branch:{branchName}. Labeled as `bump:patch`".
+   > Format should be the following "Opened {Link to url but the text should just be `PR{Number}`} from `branch:{branchName}. Labeled as `bump:patch`".
 
 ## Notes
 
