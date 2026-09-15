@@ -178,6 +178,7 @@ def build_pr_lists(rows, oldest_n=10):
         if not r.get("PO#"):
             no_po.append({
                 "pr_number": r.get("PR#"),
+                "date_into_sap": r.get("Date into SAP"),
                 "header": r.get("Header Text"),
                 "category": r.get("Category"),
                 "quarter": r.get("Quarter"),
