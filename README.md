@@ -1,13 +1,13 @@
-# Lumenis AI
+# My Plugins
 
-Skills for me organized as a plugin marketplace.
+Claude skills for me package in plugins.
 
 ## Plugins
 
-| Plugin      | Install                | Description                                                                                |
-| ----------- | ---------------------- | ------------------------------------------------------------------------------------------ |
-| `core`      | `core@lumenis-ai`      | Brand context, global design system, per-product context/design skills. **Install first.** |
-| `marketing` | `marketing@lumenis-ai` | Positioning, image/HubSpot workflows.                                                      |
+| Plugin      | Install                | Description                                         |
+| ----------- | ---------------------- | --------------------------------------------------- |
+| `core`      | `core@lumenis-ai`      | Brand context, Department Context, Product context. |
+| `marketing` | `marketing@lumenis-ai` | Skills used by me                                   |
 
 ## Installing
 
