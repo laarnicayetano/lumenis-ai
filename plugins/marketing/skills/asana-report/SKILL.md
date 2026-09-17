@@ -72,14 +72,14 @@ Produce a single report, in this shape:
 # Asana Weekly Digest — <look-back start> to <today>
 
 ## Needs attention
-- [flag type] [<task name>](<permalink>) (<project>) — <one-line why>,
+- {{FLAG_TYPE}} {{TASK_NAME}} — {{PERMALINK}} ({{PROJECT}}) — {{ONE_LINE_WHY}}
   ... one line per Step 5 flag, most urgent first (overdue > slipping > gone quiet > unowned)
   If nothing was flagged, say so explicitly ("Nothing at risk this week") rather than omitting the section.
 
 ## What happened last week
-### <Project name>
-- **[<Task name>](<permalink>)**
-  - <Person>: <what they did> (<day>)
+### {{PROJECT_NAME}}
+- **{{TASK_NAME}}** — {{PERMALINK}}
+  - {{PERSON}}: {{WHAT_THEY_DID}} ({{DAY}})
   - ... one line per Step 3 story, chronological
 ... repeat per project, skip projects with zero in-window activity
 
